@@ -12,13 +12,11 @@ class AuthUserAPIView(GenericAPIView):
 
     def get(self, request):
         user = request.user
-
         serializer = RegisterSerializer(user)
         return response.Response({"user": serializer.data})
 
 
 class RegisterAPIView(GenericAPIView):
-
     serializer_class = RegisterSerializer
 
     def post(self, request):

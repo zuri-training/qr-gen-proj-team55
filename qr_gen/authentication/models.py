@@ -4,10 +4,9 @@ from django.contrib.auth.models import PermissionsMixin, AbstractBaseUser, UserM
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
-import jwt
 from datetime import datetime, timedelta
-
 from django.conf import settings
+import jwt
 
 """
 - this model will allow user to have access_token and email will be arequire field

@@ -1,4 +1,3 @@
-from click import password_option
 from rest_framework import serializers
 from authentication.models import User
 
@@ -19,9 +18,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 
 class LoginSerializer(serializers.ModelSerializer):
-    password = password = serializers.CharField(
-        max_length=25, min_length=6, write_only=True
-    )
+    password = serializers.CharField(max_length=25, min_length=6, write_only=True)
 
     class Meta:
         model = User
