@@ -9,8 +9,7 @@ from django.conf import settings
 import jwt
 
 """
-- this model will allow user to have access_token and email will be arequire field
-
+- this model will allow user to have access_token and email will be a require field
 - use the email and password instead of username and password
 """
 
@@ -91,5 +90,4 @@ class User(AbstractBaseUser, PermissionsMixin, TrackingModel):
             settings.SECRET_KEY,
             algorithm="HS256",
         )
-
         return token
