@@ -4,10 +4,16 @@
 This project involve building a web site for generating a (Quick Response) qr_code where user that visit the site can only generate the code after registration. The code generated should also be able to use both on and offline and can be shared via email, can be downloaded in PNG and PDF
 
 # Problem statement
+With the evolution of Technology, quick access to service using an encrypted method has been evolving over the years, platform for the creating this encryption is what we will be building.
 
 
 # Framework for building
+Figma
+
+HTML5,CSS & JavaScript
+
 Django
+
 # Contributors Guide
 Fork the repository.
 
