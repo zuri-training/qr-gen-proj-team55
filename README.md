@@ -5,6 +5,7 @@ This project involve building a web site for generating a (Quick Response) qr_co
 
 # Problem statement
 
+
 # Framework for building
 Django
 # Contributors Guide
