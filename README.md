@@ -5,8 +5,6 @@ This project involve building a web site for generating a (Quick Response) qr_co
 
 # Problem statement
 
-# API Details
-
 # Framework for building
 Django
 # Contributors Guide
@@ -43,3 +41,6 @@ Joshua Eze-
 http://github.com/Allenkeys
 
 # FrontEnd Contributors
+
+# API Details
+
