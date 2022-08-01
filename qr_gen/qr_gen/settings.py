@@ -1,3 +1,5 @@
+from ctypes import cast
+from email.policy import default
 import os
 from pathlib import Path
 from decouple import config
@@ -14,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 
