@@ -18,7 +18,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 
-AUTH_USER_MODEL = "authentication.User"
 # Application definition
 
 INSTALLED_APPS = [
@@ -31,7 +30,7 @@ INSTALLED_APPS = [
     # APP NAMES
     "qr_gen_app.apps.QrGenAppConfig",
     "authentication.apps.AuthenticationConfig",
-    # REST FRAMEWORK FOR API
+    # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
@@ -101,11 +100,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-REST_FRAMEWORK = {
-    "DAFAULT_AUTHENTICATION_CLASSES": [
-        "authentication.jwt.JWTAuthentication",
-    ]
-}
+
+# Authentications
+
+AUTH_USER_MODEL = "authentication.CustomUser"
 
 LANGUAGE_CODE = "en-us"
 
@@ -125,3 +123,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    "DAFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    )
+}
