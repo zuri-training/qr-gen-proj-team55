@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="script.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    />
+  </head>
+  <body>
+    <section class="leftside">
+      <div class="logo"></div>
+      <img src="images/amico.png" alt="frontimg" />
+      <h2>Welcome</h2>
+      <p>
+        Sign up into GenQr to activate and have easy and well defined
+        accessibility to different features
+      </p>
+    </section>
+      <h2 class="left">Create Account</h2>
+    <form class="signup" method="POST" action="{% url 'login' %}">
+     <table>
+      <tr>
+        <td>
+          <label for="">Full name</label>
+        </td>
+      </tr>
+      <tr class="top">
+        <td>
+          <input placeholder="Jane Doe" type="text" name="" id="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="Email">Email</label>
+        </td>
+      </tr>
+      <tr class="top">
+        <td>
+          <input placeholder="....@gmail.com" type="email" name="" id="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="">Password</label>
+        </td>
+      </tr>
+      <tr class="top">
+        <td>
+          <input placeholder="**************" type="password" name="" id="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="">Confirm Password</label>
+        </td>
+      </tr>
+      <tr class="top">
+        <td>
+          <input placeholder="**************" type="password" name="" id="">
+        </td>
+      </tr>
+      <tr>
+        <td class="rid">Password must not be less than 8 characters</td>
+      </tr>
+     </table>
+    </form> 
+    <button> <a href=""></a> Sign-Up</button> 
+    <form class="checkbox " action="">
+    <input type="checkbox">
+    <label for="">By using this,you agree to the term of Users</label>
+
+    </form>
+  <div class="end">
+    <p>
+      You already have an account? <a href="">LOGIN</a>
+    </p>
+  </div>
+  </body>
+</html>
