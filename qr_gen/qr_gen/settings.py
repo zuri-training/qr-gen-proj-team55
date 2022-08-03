@@ -1,3 +1,4 @@
+from ctypes import cast
 import os
 from pathlib import Path
 from decouple import config
@@ -11,15 +12,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
+# SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
+SECRET_KEY = "f3lls!7@rsyn(*_1zg#zn7c4ufyc_yx(tklkw8d8%t2j*dj#v5"
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 DEBUG = True
-
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 
+# Authentications
+AUTH_USER_MODEL = "authentication.CustomUser"
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -28,8 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # APP NAMES
-    "qr_gen_app.apps.QrGenAppConfig",
-    "authentication.apps.AuthenticationConfig",
+    "authentication",
     # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
@@ -76,8 +78,15 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-
+"""
+REST_FRAMEWORK = {
+    "DAFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    )
+}
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -101,10 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 
-# Authentications
-
-AUTH_USER_MODEL = "authentication.CustomUser"
-
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "UTC"
@@ -123,11 +128,3 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-REST_FRAMEWORK = {
-    "DAFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework.authentication.SessionAuthentication",
-        "rest_framework.authentication.BasicAuthentication",
-        "rest_framework.authentication.TokenAuthentication",
-    )
-}
