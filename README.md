@@ -33,6 +33,7 @@ Link the pull request with your issue.
 
 Do not merge your pull request yourself. Wait for review and merging.
 
+To add install all requirement pip install -r requirements.txt 
 
 # Designers
 
