@@ -43,8 +43,3 @@ class qrcode_link(models.Model):
         self.qr_code.save(fname, File(buffer), save=False)
         canvas.close()
         super().save(*args, **kwargs)
-
-
-        qrcode_img = qrcode.make(self.url, image_factory=qrcode.image.svg.SvgImage)
-        fname = f'qr_code-{self.name}.svg'
-        qrcode_img.save(fname)
