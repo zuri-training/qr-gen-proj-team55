@@ -47,6 +47,9 @@ https://github.com/drizla01
 Joshua Eze-
 http://github.com/Allenkeys
 
+dighomanor Jeremiah
+https:github.com/Digho007
+
 # FrontEnd Contributors
 
 # API Details
