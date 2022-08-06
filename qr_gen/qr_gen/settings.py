@@ -20,10 +20,8 @@ DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
-
-# AUTH_USER_MODEL = "authentication.User"
+AUTH_USER_MODEL = "authentication.CustomUser"
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -32,9 +30,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # APP NAMES
-    "qr_gen_app.apps.QrGenAppConfig",
-    "authentication.apps.AuthenticationConfig",
-    # REST FRAMEWORK FOR API
+    "authentication",
+    # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
@@ -82,8 +79,15 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-
+"""
+REST_FRAMEWORK = {
+    "DAFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    )
+}
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
