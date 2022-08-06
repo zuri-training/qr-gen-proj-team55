@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 from django.contrib.auth.models import (
     AbstractUser,
@@ -18,7 +19,8 @@ from .managers import MyUserManager
 
 # Create your models here.
 class CustomUser(AbstractUser):
-    email = models.EmailField(_("email address"), unique=True)
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField(unique=True, null=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
@@ -32,22 +34,19 @@ class CustomUser(AbstractUser):
         return self.email
 
 
-"""
-    # create a default slug or user for users if blank
-    def gen_random_slug(self):
-        random_slug = slugify(
-            self.first_name + self.last_name + utils.generate_random_id()
-        )
-        while CustomUser.objects.filter(slug=random_slug).exists():
-            random_slug = slugify(
-                self.first_name + self.last_name + utils.generate_random_id()
-            )
+class Dashboard7(models.Model):
+    email = models.ForeignKey(CustomUser, max_length=120, on_delete=models.CASCADE)
+    name = models.CharField(max_length=120, null=True)
+    phone_Number = models.CharField(max_length=120, null=True)
+    avater = models.ImageField(null=True, default="")
+    bio = models.TextField(null=True)
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
 
-        return random_slug
+    class Meta:
+        ordering = [
+            "-updated",
+        ]
 
-    def save(self, *args, **kwargs):
-
-        if not self.slug:
-            self.slug = self.gen_random_slug()
-        super().save(*args, **kwargs)
-"""
+    def __str__(self):
+        return self.email
