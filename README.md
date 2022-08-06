@@ -43,4 +43,5 @@ Joshua Eze-
 http://github.com/Allenkeys
 
 # FrontEnd Contributors
+Samson Vershima Saaikyaa
 http://GitHub.com/Vershima2
