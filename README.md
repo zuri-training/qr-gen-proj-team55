@@ -66,6 +66,11 @@ https://github.com/efedivine
 Falola Samuel
 https://github.com/sammiecode
 
+Daniel Ige
+https://github.com/igedaniel96
+
+Emediong Ebong 
+https://github.com/Emyebong
 
 # BackEnd Contributors
 David Ilori-
