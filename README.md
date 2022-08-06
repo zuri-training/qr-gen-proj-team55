@@ -63,6 +63,10 @@ https://github.com/bara506
 Ekojawe Efe
 https://github.com/efedivine
 
+Falola Samuel
+https://github.com/sammiecode
+
+
 # BackEnd Contributors
 David Ilori-
 https://github.com/Ddluwole
@@ -76,9 +80,6 @@ http://github.com/Allenkeys
 Dighomanor Jeremiah-
 http://github.com/Digho007
 
-Falola Samuel
-https://github.com/sammiecode
-
 
 # FrontEnd Contributors
 Mark nehemiah
@@ -89,5 +90,6 @@ http://github.com/vershima2
 
 Awelewa Oluwasanmi Omolade
 http://github.com/Sanmi01
+
 # API Details
 
