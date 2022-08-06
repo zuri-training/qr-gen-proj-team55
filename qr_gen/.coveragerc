@@ -1,6 +1,0 @@
-[run]
-source = authentication/,qr_gen_app/,api/,
-omit = venv
-        */migrations/*
-        */tests/*
-        */__init__.py
