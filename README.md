@@ -37,7 +37,7 @@ To add install all requirement pip install -r requirements.txt
 
 # Designers
 Itepu precious eden
-github.com/preciousitepu
+https://github.com/preciousitepu
 
 Timileyin Lasisi
 https://github.com/Timileyin21 
@@ -76,6 +76,10 @@ http://github.com/Allenkeys
 Dighomanor Jeremiah-
 http://github.com/Digho007
 
+Falola Samuel
+https://github.com/sammiecode
+
+
 # FrontEnd Contributors
 Mark nehemiah
 http://github.com/markben2122
@@ -83,6 +87,7 @@ http://github.com/markben2122
 Samson Vershima Saaikyaa
 http://github.com/vershima2
 
-
+Awelewa Oluwasanmi Omolade
+http://github.com/Sanmi01
 # API Details
 
