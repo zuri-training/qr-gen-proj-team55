@@ -72,6 +72,9 @@ https://github.com/igedaniel96
 Emediong Ebong 
 https://github.com/Emyebong
 
+Oluwabusayo Basirat Atiku
+https://github.com/Busayoatiku
+
 # BackEnd Contributors
 David Ilori-
 https://github.com/Ddluwole
@@ -99,8 +102,6 @@ http://github.com/Sanmi01
 Akobi, Mutiat Adeoti
 https://github.com/PhoenixClix
 
-Oluwabusayo Basirat Atiku
-https://github.com/Busayoatiku
 
 # API Details
 
