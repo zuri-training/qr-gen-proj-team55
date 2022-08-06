@@ -17,10 +17,14 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 <<<<<<< HEAD
+<<<<<<< HEAD
 DEBUG = config("DJANGO_DEBUG", default=True)
 =======
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 >>>>>>> e5128db0eb1ab8de2731d519b17502d9326dc290
+=======
+DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+>>>>>>> 0c9807562f1c325b9505f67bc6fe5ecdf7a4b860
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 
@@ -134,3 +138,7 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_root")
+
