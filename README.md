@@ -96,5 +96,8 @@ http://github.com/vershima2
 Awelewa Oluwasanmi Omolade
 http://github.com/Sanmi01
 
+Akobi, Mutiat Adeoti
+https://github.com/PhoenixClix
+
 # API Details
 
