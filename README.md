@@ -36,7 +36,32 @@ Do not merge your pull request yourself. Wait for review and merging.
 To add install all requirement pip install -r requirements.txt 
 
 # Designers
+Itepu precious eden
+github.com/preciousitepu
 
+Timileyin Lasisi
+https://github.com/Timileyin21 
+
+Abimbola Ashonibare
+https://github.com/BimboOni
+
+Badamosi Abdullahi Oluwatobi
+https://github.com/Abdooorl
+
+Zipporah Badi
+https://github.com/Zeebadi
+
+Nnoruka Anthonia
+https://github.com/Antoruka
+
+Uduak Oscar
+https://github.com/Udyoscar
+
+Barakat Muraina Omolara 
+https://github.com/bara506
+
+Ekojawe Efe
+https://github.com/efedivine
 
 # BackEnd Contributors
 David Ilori-
@@ -55,8 +80,9 @@ http://github.com/Digho007
 Mark nehemiah
 http://github.com/markben2122
 
+Samson Vershima Saaikyaa
+http://github.com/vershima2
 
-http://github.com/
 
 # API Details
 
