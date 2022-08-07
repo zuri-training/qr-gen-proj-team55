@@ -6,7 +6,7 @@ from .models import CustomUser, Dashboard7
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = CustomUser
-        fields = ["email", "password"]
+        fields = ["name", "email", "password1", "password2"]
 
 
 class CustomUserChangeForm(UserChangeForm):
