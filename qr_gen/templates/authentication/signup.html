@@ -1,0 +1,36 @@
+{% load "static/signup.css" %} {% block content %}
+<section class="leftside">
+  <div class="logo">
+    <img class="logo" src="images/qrcode 2.png" alt="" />
+  </div>
+  <img class="heroimg" src="images/amico.png" alt="frontimg" />
+  <h2>Welcome</h2>
+  <p>
+    Sign up into GenQr to activate and have easy and well defined accessibility
+    to different features
+  </p>
+</section>
+<main>
+  <h2 class="left">Create Account</h2>
+  <form class="signup" action="" method="POST">
+    <label for="name">Name</label>
+    <input type="text" placeholder="Enter your Name" />
+    <label for="email">Email</label>
+    <input type="email" placeholder="Enter your Email" />
+    <label for="password1">Password</label>
+    <input type="password" placeholder="Enter your password" />
+    <label for="password2">Confirm Password</label>
+    <input type="password" placeholder="Confirm your password" />
+  </form>
+  <button><a href="{% url 'signup' %}"></a> Sign-Up</button>
+
+  <form class="box" action="">
+    <input type="checkbox" />
+    <label for="">By using this , you agree to the term of users</label>
+  </form>
+  <div class="end">
+    <p>You already have an account? <a href="{% url 'login' %}">LOGIN</a></p>
+  </div>
+</main>
+
+{% endblock content %}
