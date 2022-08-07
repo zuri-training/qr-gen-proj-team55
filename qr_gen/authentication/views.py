@@ -65,4 +65,4 @@ def updateUser7(request):
         if form.is_valid():
             form.save()
             return redirect("user-profile", pk=user.id)
-    return render(request, "authentication/user-update.html", {"form": form})
+    return render(request, "authentication/profile.html", {"form": form})
