@@ -1,8 +1,11 @@
 # Repository for Team 55 QR_Generator
+<div>
 <p align="center">
   <a href="" rel="noopener">
  <img src="Frontend/images/qrcode 2.png" alt="Project logo"></a>
 </p>
+</div>
+
 ## Table of Contents
 
 * [Project Description](#project-description)
