@@ -1,5 +1,4 @@
 from ctypes import cast
-from email.policy import default
 import os
 from pathlib import Path
 from decouple import config
@@ -13,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -26,11 +26,10 @@ DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 >>>>>>> 0c9807562f1c325b9505f67bc6fe5ecdf7a4b860
 
+
 ALLOWED_HOSTS = ["*"]  # To run in any machine
-
-AUTH_USER_MODEL = "authentication.User"
+AUTH_USER_MODEL = "authentication.CustomUser"
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -39,9 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # APP NAMES
-    "qr_gen_app.apps.QrGenAppConfig",
-    "authentication.apps.AuthenticationConfig",
-    # REST FRAMEWORK FOR API
+    "authentication",
+    # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
@@ -62,7 +60,9 @@ ROOT_URLCONF = "qr_gen.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [ BASE_DIR / "templates", ],
+        "DIRS": [
+            BASE_DIR / "templates",
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -87,8 +87,15 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-
+"""
+REST_FRAMEWORK = {
+    "DAFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    )
+}
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -110,12 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
-
-REST_FRAMEWORK = {
-    "DAFAULT_AUTHENTICATION_CLASSES": [
-        "authentication.jwt.JWTAuthentication",
-    ]
-}
 
 LANGUAGE_CODE = "en-us"
 
@@ -139,6 +140,5 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_root")
-

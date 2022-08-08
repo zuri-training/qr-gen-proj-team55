@@ -13,7 +13,8 @@ Figma
 HTML5,CSS & JavaScript
 
 Django
-
+ sign up page
+ 
 # Contributors Guide
 Fork the repository.
 
