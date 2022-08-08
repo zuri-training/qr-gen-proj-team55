@@ -13,18 +13,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
+# SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
-<<<<<<< HEAD
-DEBUG = config("DJANGO_DEBUG", default=True)
-=======
-DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
->>>>>>> e5128db0eb1ab8de2731d519b17502d9326dc290
-=======
-DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
->>>>>>> 0c9807562f1c325b9505f67bc6fe5ecdf7a4b860
+# # SECURITY WARNING: don't run with debug turned on in production!
+
+# DEBUG = config("DJANGO_DEBUG", default=True)
+
+# DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+
+
+# DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+
+SECRET_KEY = 'django-insecure-^z@g_7u*^i5gk6vq=l2yks^jron@z_8m%&428iz4l$hdvrrago'
+DEBUG = True
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
