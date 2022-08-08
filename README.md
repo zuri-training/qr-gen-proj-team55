@@ -91,12 +91,13 @@ Project is : *in progress*
 
 ## Contributors
 
-__Designers__ <br/>
-*Itepu precious eden
-*https://github.com/preciousitepu
+__Designers__ <br/><br/>
 
-Timileyin Lasisi
-https://github.com/Timileyin21 
+* Itepu precious eden
+* https://github.com/preciousitepu
+
+* Timileyin Lasisi
+* https://github.com/Timileyin21 
 
 Abimbola Ashonibare
 https://github.com/BimboOni
