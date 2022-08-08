@@ -97,68 +97,69 @@ __Designers__ <br/><br/>
  `https://github.com/preciousitepu`
 
 * Timileyin Lasisi
-'https://github.com/Timileyin21'
+`https://github.com/Timileyin21`
 
-Abimbola Ashonibare
-https://github.com/BimboOni
+* Abimbola Ashonibare
+`https://github.com/BimboOni`
 
-Badamosi Abdullahi Oluwatobi
-https://github.com/Abdooorl
+* Badamosi Abdullahi Oluwatobi
+`https://github.com/Abdooorl`
 
-Zipporah Badi
-https://github.com/Zeebadi
+* Zipporah Badi
+`https://github.com/Zeebadi`
 
-Nnoruka Anthonia
-https://github.com/Antoruka
+* Nnoruka Anthonia
+`https://github.com/Antoruka`
 
-Uduak Oscar
-https://github.com/Udyoscar
+* Uduak Oscar
+`https://github.com/Udyoscar`
 
-Barakat Muraina Omolara 
-https://github.com/bara506
+* Barakat Muraina Omolara 
+`https://github.com/bara506`
 
-Ekojawe Efe
-https://github.com/efedivine
+* Ekojawe Efe
+`https://github.com/efedivine`
 
-Falola Samuel
-https://github.com/sammiecode
+* Falola Samuel
+`https://github.com/sammiecode`
 
-Daniel Ige
-https://github.com/igedaniel96
+* Daniel Ige
+`https://github.com/igedaniel96`
 
-Emediong Ebong 
-https://github.com/Emyebong
+* Emediong Ebong 
+`https://github.com/Emyebong`
 
-Oluwabusayo Basirat Atiku
-https://github.com/Busayoatiku
+* Oluwabusayo Basirat Atiku
+`https://github.com/Busayoatiku`
 
-__BackEnd Contributors__ <br/>
-David Ilori-
-https://github.com/Ddluwole
+__BackEnd Contributors__ <br/><br/>
 
-Awal Umar-
-https://github.com/drizla01
+* David Ilori
+`https://github.com/Ddluwole`
 
-Joshua Eze-
-http://github.com/Allenkeys
+* Awal Umar
+`https://github.com/drizla01`
 
-Dighomanor Jeremiah-
-http://github.com/Digho007
+* Joshua Eze
+`http://github.com/Allenkeys`
+
+* Dighomanor Jeremiah
+`http://github.com/Digho007`
 
 
-__FrontEnd Contributors__ <br/>
+__FrontEnd Contributors__ <br/><br/>
 
-Mark nehemiah
-http://github.com/markben2122
+* Mark nehemiah
+`http://github.com/markben2122`
 
-Samson Vershima Saaikyaa
-http://github.com/vershima2
+* Samson Vershima Saaikyaa
+`http://github.com/vershima2`
 
-Awelewa Oluwasanmi Omolade
-http://github.com/Sanmi01
+* Awelewa Oluwasanmi Omolade
+`http://github.com/Sanmi01`
 
-Akobi, Mutiat Adeoti
-https://github.com/PhoenixClix
+* Akobi, Mutiat Adeoti
+`https://github.com/PhoenixClix`
 
 ##Relevant Links
 
