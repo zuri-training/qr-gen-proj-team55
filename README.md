@@ -1,42 +1,97 @@
 # Repository for Team 55 QR_Generator
 
-# Project Description
+
+## Table of Contents
+
+* [Project Description](#project-description)
+* [Problem statement](#problem-statement)
+* [Framework for building](#framework-for-building)
+* [Contributors Guide](#contributors-guide)
+* [Features of the Website](#features-of-the-website)
+* [Product Specification](#product-specialization)
+* [Project Status](#project-status)
+* [Contributors](#contributors)
+* [Relevant Links](#relevant-links)
+* [API Details](#api-details)
+* [Acknowledgements](#acknowledgements)
+
+## Project Description
+
 This project involve building a web site for generating a (Quick Response) qr_code where user that visit the site can only generate the code after registration. The code generated should also be able to use both on and offline and can be shared via email, can be downloaded in PNG and PDF
 
-# Problem statement
+## Problem statement
 With the evolution of Technology, quick access to service using an encrypted method has been evolving over the years, platform for the creating this encryption is what we will be building.
 
 
-# Framework for building
-Figma
+## Framework for building
+The project is was built using the ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) code Editor and the following technologies were used: <br/>
+* __Design__<br/>
+        ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+* __Frontend__<br/>
+      ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+      ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+      ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-HTML5,CSS & JavaScript
+* __Backend__<br/>
+        ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+        ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 
-Django
- sign up page
  
-# Contributors Guide
-Fork the repository.
+## Contributors Guide
 
-Clone the repository in your local machine.
+1. Visit the Repository to the Project on Github Website: https://github.com/zuri-training/qr-gen-proj-team55
+2. Fork the repository: Click the "Fork" button on the upper right corner of the Repo page.*
+3. Make a local clone by: 
+     Copying the URL for the forked Repo "https://github.com/zuri-training/qr-gen-proj-team55" <br/>
+     Create a Folder on your Local machine for the project <br/>
+     Open Command prompt / Terminal in the same folder location <br/>
+     In your Terminal, type: <br/>
+        `git clone https://github.com/github_username/qr-gen-proj-team55.git`
+4. Open terminal and set upstream branch: <br/>
+    `git remote add upstream https://github.com/zuri-training/qr-gen-proj-team55`
+5. To add install all requirement for contributors to updates packages run on cloned terminal:<br/>
+    `pip install -r requirements.txt` 
+6. Pull upstream to get up to date with the original repo:<br/>
+    `git pull upstream main`
+7. Create a new branch for the task you are working on :<br/>
+    `git checkout -b branchName`<br/>
+    *(Make sure your branchName is descriptive in context to the feature you are working on. Also be sure to check which branch you are on using `git status` before you begin working)*
+8. When you're done with your task, do:<br/>
+    `git add`<br/>
+   - Commit your work with a message:<br/>
+   `git commit -m "message"`
+9. To avoid conflicts:<br/>
+    `git pull upstream main`
+10. Then push your branch:<br/>
+    `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
+11. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
-Create an upstream on your local machine to pull the latest code from the develop branch of this repository
+##Features of the Website
+__Unauthenticated users__ - An individual that has not registered to the website would be able to;
 
-Create a new branch on your local machine.
+Visit the platform to view basic information about it
+View and Interact with the documentation
+Register to view more details
+No access to use until registered
 
-Switch to the branch and make all changes on that branch.
+__Authenticated Users__ - A user that has fully registered and has completed all the verification processes in the website
 
-Commit changes to the branch and push to your forked repo.
+Full access to the platform
+Allow setting on what should happen when qr is scanned - give at least 2 options.
+Allow users to download (allow png, jpg and pdf download format), or share code by email or social media.
+Allow users to save data and come back to it
 
-Come back to to the repository and open a pull request on the develop branch.
+## Product Specialization
+* Mobile Phones
+* Tablets
+* Laptops
 
-Link the pull request with your issue.
+## Project Status
+Project is : *in progress*
 
-Do not merge your pull request yourself. Wait for review and merging.
+## Contributors
 
-To add install all requirement pip install -r requirements.txt 
-
-# Designers
+__Designers__
 Itepu precious eden
 https://github.com/preciousitepu
 
@@ -76,7 +131,7 @@ https://github.com/Emyebong
 Oluwabusayo Basirat Atiku
 https://github.com/Busayoatiku
 
-# BackEnd Contributors
+__BackEnd Contributors__
 David Ilori-
 https://github.com/Ddluwole
 
@@ -90,7 +145,8 @@ Dighomanor Jeremiah-
 http://github.com/Digho007
 
 
-# FrontEnd Contributors
+__FrontEnd Contributors__
+
 Mark nehemiah
 http://github.com/markben2122
 
@@ -103,6 +159,9 @@ http://github.com/Sanmi01
 Akobi, Mutiat Adeoti
 https://github.com/PhoenixClix
 
+##Relevant Links
 
-# API Details
+## API Details
+
+##Aknowledgement
 
