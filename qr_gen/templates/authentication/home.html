@@ -55,12 +55,14 @@
                 <a class="nav-link" href="">Contact us</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                <a class="nav-link" href="{% url 'authentication:login' %}"
+                  >Log In</a
+                >
               </li>
               <li class="nav-item mx-2">
                 <a
                   class="btn purple-button"
-                  href="{% url 'signup' %}"
+                  href="{% url 'authentication:signup' %}"
                   role="button"
                   >Sign up</a
                 >
@@ -90,7 +92,7 @@
             <div class="d-flex justify-content-center justify-content-lg-start">
               <a
                 class="btn purple-button my-2 px-4"
-                href="{% url 'signup' %}"
+                href="{% url 'authentication:signup' %}"
                 role="button"
                 >Get started</a
               >

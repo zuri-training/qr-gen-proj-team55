@@ -1,16 +1,7 @@
-from tkinter import CASCADE
 from django.db import models
-from django.contrib.auth.models import (
-    AbstractUser,
-)
-from django.utils.translation import gettext_lazy as _  # python internationalization
-from django.utils import timezone
-from django.template.defaultfilters import slugify
-from datetime import datetime, timedelta
-from django.conf import settings
-from . import utils
+from django.contrib.auth.models import AbstractUser
+from django.utils.translation import gettext_lazy as _
 from .managers import MyUserManager
-
 
 """
 - this model will allow user to have access_token and email will be a require field
@@ -18,15 +9,15 @@ from .managers import MyUserManager
 """
 
 # Create your models here.
+
+
 class CustomUser(AbstractUser):
-    name = models.CharField(max_length=200, null=True)
-    email = models.EmailField(unique=True, null=True)
-    is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
-    date_joined = models.DateTimeField(default=timezone.now)
+    username = None
+    email = models.EmailField(_("email address"), unique=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
+
     objects = MyUserManager()
 
     def __str__(self):

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+#logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sign {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+#login-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#qr-img-div {
+  max-height: 24rem;
+  max-width: 24rem;
+  margin: auto;
+}
+
+#qr-img {
+  width: 100%;
+}
+
+.spacing {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.img-text {
+  text-align: center;
+}
+
+.img-text p {
+  color: #5e5c5f;
+  font-weight: 300;
+}
+
+.container {
+  background-color: #f4f3f3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  width: 45%;
+  background-color: #f4f3f3;
+}
+
+#login-img {
+  padding: 2rem 4rem;
+  width: 55%;
+  background: #faf8fc;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label,
+p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+  border: 1px solid #cfcecf;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#button {
+  margin-top: 25px;
+  vertical-align: text-bottom;
+}
+
+#button button {
+  background-color: #4b296b;
+  padding: 10px 40px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+}
+
+.second-genqr-img {
+  display: none;
+}
+
+.text-light-purple {
+  color: #694d84;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media only screen and (max-width: 850px) {
+  form {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .second-genqr-img {
+    display: block;
+  }
+  #login-img {
+    display: none;
+  }
+
+  form {
+    padding: 1rem;
+    width: 80%;
+  }
+}

@@ -1,0 +1,68 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <title>GenOR Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div id="login-img">
+          <div>
+            <div class="spacing">
+              <img src="{% static './images/qrcode 2.png' %}" />
+            </div>
+            <div id="qr-img-div" class="spacing animated">
+              <img id="qr-img" src="{% static './images/amico.png' %}" />
+            </div>
+            <div class="img-text">
+              <h2 class="spacing">Welcome</h2>
+              <p class="spacing">
+                Log into GenQr to activate and have easy and well defined
+                accessibility to different features...
+              </p>
+            </div>
+          </div>
+        </div>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="second-genqr-img spacing">
+            <img src="{% static './images/qrcode 2.png' %}" />
+          </div>
+          <h2 id="sign">Welcome Back...</h2>
+          <p>Please enter your Username and Password</p>
+          <div class="form-row">
+            <div class="form-group spacing">
+              <label for="firstname">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="........@gmail.com"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" />
+            </div>
+          </div>
+          <small class="text-light-purple">Forgot password?</small>
+          <div id="button">
+            <button>Login</button>
+          </div>
+          <small class="spacing"
+            >Don't have an account?
+            <span class="text-light-purple">Sign Up</span>></small
+          >
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

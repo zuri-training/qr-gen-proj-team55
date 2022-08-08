@@ -1,38 +1,66 @@
-{% load "static"%} {% load "styles/signup.css" %} {% block content %}
+{% load static %}
 
-<section class="leftside">
-  <div class="logo">
-    <img class="logo" src="{{ images/qrcode2.png }}" alt="" />
-  </div>
-  <img class="heroimg" src="{{ images/amico.png }}" alt="frontimg" />
-  <h2>Welcome</h2>
-  <p>
-    Sign up into GenQr to activate and have easy and well defined accessibility
-    to different features
-  </p>
-</section>
-<main>
-  <h2 class="left">Create Account</h2>
-  <form class="signup" action="" method="POST">
-    {% csrf_token }
-    <label for="name">Name</label>
-    <input type="text" placeholder="Enter your Name" />
-    <label for="email">Email</label>
-    <input type="email" placeholder="Enter your Email" />
-    <label for="password1">Password</label>
-    <input type="password" placeholder="Enter your password" />
-    <label for="password2">Confirm Password</label>
-    <input type="password" placeholder="Confirm your password" />
-  </form>
-  <button><a href="{% url 'signup' %}"></a> Sign-Up</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup page</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}" />
+    <!-- <link rel="stylesheet" href="script.js" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    />
+  </head>
+  {% block content %}
+  <body>
+    <section class="leftside">
+      <div class="logo">
+        <img class="logo" src=" {% static './images/qrcode 2.png' %}" alt="" />
+      </div>
+      <img
+        class="heroimg"
+        src="{% static './images/amico.png' %}"
+        alt="frontimg"
+      />
+      <h2>Welcome</h2>
+      <p>
+        Sign up into GenQr to activate and have easy and well defined
+        accessibility to different features
+      </p>
+    </section>
+    <main>
+      <h2 class="left">Create Account</h2>
+      <form class="signup" method="POST" action="">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="John Doe" />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="....@gmail.com" />
+        <label for="Password">Password</label>
+        <input type="password" name="password" placeholder="********" />
+        <label for=" Confirm Password">Confirm Password</label>
+        <input type="password" name="cnfrm_password" placeholder="********" />
 
-  <form class="box" action="">
-    <input type="checkbox" />
-    <label for="">By using this , you agree to the term of users</label>
-  </form>
-  <div class="end">
-    <p>You already have an account? <a href="{% url 'login' %}">LOGIN</a></p>
-  </div>
-</main>
+        <button><a href="{% url 'authentication:home' %}"></a> Sign Up</button>
+      </form>
 
-{% endblock content %}
+      <form class="box" action="">
+        <input type="checkbox" />
+        <label for="">By using this , you agree to the term of users</label>
+      </form>
+      <div class="end">
+        <p>
+          You already have an account?
+          <a href="{% url 'authentication:login' %}">LOGIN</a>
+        </p>
+      </div>
+    </main>
+  </body>
+  {% endblock %}
+</html>
