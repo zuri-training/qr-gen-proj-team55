@@ -171,7 +171,7 @@ __FrontEnd Contributors__ <br/>
 
 ## API Details
 
-##Aknowledgements
+## Acknowledgements
 Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
 as implement what they have have in a real life settings.
 
