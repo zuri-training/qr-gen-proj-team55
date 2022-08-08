@@ -94,10 +94,10 @@ Project is : *in progress*
 __Designers__ <br/><br/>
 
 * Itepu precious eden
- `(https://github.com/preciousitepu)`
+ `https://github.com/preciousitepu`
 
 * Timileyin Lasisi
-* https://github.com/Timileyin21 
+'https://github.com/Timileyin21'
 
 Abimbola Ashonibare
 https://github.com/BimboOni
