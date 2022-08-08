@@ -26,9 +26,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto my-2 my-lg-0">
             <li class="nav-item mx-2"><a class="nav-link" href="./index.html">Home</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="">How it works</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="">Documentation</a></li>
-            <li class="nav-item mx-2"><a class="nav-link" href="">FAQs</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#how-it-works">How it works</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#api-documentation">Documentation</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#faq">FAQs</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="">Contact us</a></li>
             <li class="nav-item mx-2"><a class="nav-link" href="{% url 'authentication:login' %}">Log in</a></li>
             <li class="nav-item mx-2"><a class="btn purple-button" href="{% url 'authentication:signup' %}" role="button">Sign up</a></li>
@@ -47,7 +47,7 @@
           <h5 class="mx-2 my-3">Share generated qr codes to your social media profiles, track performance, edit content
             of qr code without having to generate a new code</h5>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a class="btn purple-button my-2 px-4" href="" role="button">Get started</a>
+            <a class="btn purple-button my-2 px-4" href="{% url 'authentication:signup' %}" role="button">Get started</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img p-md-5" data-aos="zoom-in" data-aos-delay="200">
@@ -184,7 +184,7 @@
               <img src="{% static './images/linkedin.png' %}" class="mx-2 my-1" alt="linkedin" />
             </div>
             <div class="d-flex my-2">
-              <a class="btn white-button my-2 px-4" href="" role="button">View Website</a>
+              <a class="btn white-button my-2 px-4" href="{% url 'authentication:login' %}" role="button">View Website</a>
             </div>
           </div>
         </div>
@@ -197,13 +197,13 @@
               friends with the Palfinder app, it’s easy to use and also
               completely free.</p>
             <p class="purple-text">Check us out on social media</p>
-            <div>{% static '' %}
+            <div>
               <img src="{% static './images/instagram.png' %}" class="mx-2 my-1" alt="instagram" />
               <img src="{% static './images/twitter.png' %}" class="mx-2 my-1" alt="twitter" />
               <img src="{% static './images/linkedin.png' %}" class="mx-2 my-1" alt="linkedin" />
             </div>
             <div class="d-flex my-2">
-              <a class="btn white-button my-2 px-4" href="" role="button">Download app</a>
+              <a class="btn white-button my-2 px-4" href="{% url 'authentication:login' %}" role="button">Download app</a>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@
               <img src="{% static './images/linkedin.png' %}" class="mx-2 my-1" alt="linkedin" />
             </div>
             <div class="d-flex my-2">
-              <a class="btn white-button my-2 px-4" href="" role="button">View Details</a>
+              <a class="btn white-button my-2 px-4" href="{% url 'authentication:login' %}" role="button">View Details</a>
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@
   </section>
 
   <section class="bg-grey-purple">
-    <div class="container py-5">
+    <div class="container py-5" id="faq">
       <h2 class="text-center">FAQs</h2>
       <p class="text-center">Answers to frequently asked questions</p>
       <div class="accordion p-2 rounded" id="accordionExample">
@@ -305,9 +305,7 @@
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed reprehenderit excepturi tempora quibusdam
-              officia eos? Excepturi veniam quis omnis ratione repudiandae reiciendis incidunt tempora numquam ab neque,
-              labore accusantium facere?
+              Register on our app to generate a QR code the easiest way.
             </div>
           </div>
         </div>
@@ -321,8 +319,9 @@
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero ab sapiente quo id aliquid culpa labore
-              quas amet aperiam optio nobis omnis et, distinctio ex nulla qui eaque eos.
+                Static QR Codes cannot be changed once created and printed.
+                 If the link is broken, there is nothing you can do except reprint a new one. 
+                 Dynamic QR Codes, on the other hand, are editable and can be edited in real-time.
             </div>
           </div>
         </div>
@@ -336,8 +335,7 @@
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero ab sapiente quo id aliquid culpa labore
-              quas amet aperiam optio nobis omnis et, distinctio ex nulla qui eaque eos.
+              With QrGen, you don't have to pay to use a QR code. You can use a QR code for free.
             </div>
           </div>
         </div>
@@ -351,8 +349,10 @@
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero ab sapiente quo id aliquid culpa labore
-              quas amet aperiam optio nobis omnis et, distinctio ex nulla qui eaque eos.
+                QR codes are frequently used to track information about products in a supply chain and
+                 because many smartphones have built-in QR readers – they are often used in marketing
+                  and advertising campaigns. More recently, they have played a key role in helping
+                   to trace coronavirus exposure and slow the spread of the virus.
             </div>
           </div>
         </div>
@@ -385,7 +385,7 @@
       <h5>SUPPORT</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="text-white text-decoration-none p-0">Contact Us</a></li>
-        <li class="nav-item mb-2"><a href="#" class="text-white text-decoration-none p-0">FAQs</a></li>
+        <li class="nav-item mb-2"><a href="#faq" class="text-white text-decoration-none p-0">FAQs</a></li>
         <li class="nav-item mb-2"><a href="#" class="text-white text-decoration-none p-0">Profile</a></li>
       </ul>
     </div>

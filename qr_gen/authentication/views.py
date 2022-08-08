@@ -41,11 +41,15 @@ def Login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
+        print(email)
+        print(password)
         # remember_me = request.POST.get('remember_me')
         user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
             messages.success(request, f'{user.email} logged in successfully!')
+            return redirect('authentication:home')
+
             # if not remember_me:
             #     request.session.set_expiry(0)
             # return redirect('website:index')
