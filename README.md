@@ -72,17 +72,17 @@ The project is was built using the ![Visual Studio Code](https://img.shields.io/
 ## Features of the Website
 __Unauthenticated users__ - An individual that has not registered to the website would be able to: <br/> 
 
-Visit the platform to view basic information about it
-View and Interact with the documentation
-Register to view more details
-No access to use until registered
+* Visit the platform to view basic information about it
+* View and Interact with the documentation
+* Register to view more details
+* No access to use until registered
 
 __Authenticated Users__ - A user that has fully registered and has completed all the verification processes in the website: <br/>
 
-Full access to the platform
-Allow setting on what should happen when qr is scanned - give at least 2 options.
-Allow users to download (allow png, jpg and pdf download format), or share code by email or social media.
-Allow users to save data and come back to it
+* Full access to the platform
+* Allow setting on what should happen when qr is scanned - give at least 2 options.
+* Allow users to download (allow png, jpg and pdf download format), or share code by email or social media.
+* Allow users to save data and come back to it
 
 ## Product Specialization
 * Mobile Phones
