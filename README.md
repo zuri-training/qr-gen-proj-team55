@@ -5,7 +5,7 @@
  <img src="Frontend/images/qrcode 2.png" alt="Project logo"></a>
 </p>
 </div>
-
+<div>
 ## Table of Contents
 
 * [Project Description](#project-description)
@@ -19,7 +19,7 @@
 * [Relevant Links](#relevant-links)
 * [API Details](#api-details)
 * [Acknowledgements](#acknowledgements)
-
+</div>
 ## Project Description
 
 This project involve building a web site for generating a (Quick Response) qr_code where user that visit the site can only generate the code after registration. The code generated should also be able to use both on and offline and can be shared via email, can be downloaded in PNG and PDF
