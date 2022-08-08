@@ -58,7 +58,7 @@ def log_out(request):
 
 
 @login_required(login_url="login")
-def updateUser7(request):
+def ProfileUpdate(request):
     user = request.user
     form = UserForm(instance=user)
     if request.method == "POST":
@@ -66,4 +66,5 @@ def updateUser7(request):
         if form.is_valid():
             form.save()
             return redirect("user-profile", pk=user.id)
+
     return render(request, "authentication/profile.html", {"form": form})
