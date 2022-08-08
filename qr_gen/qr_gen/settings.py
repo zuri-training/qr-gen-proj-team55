@@ -15,8 +15,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
@@ -31,10 +33,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # APP NAMES
     "authentication",
+    "qr_gen_app",
     # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
-    "django_extensions",
+    "django_extensions", 
 ]
 
 MIDDLEWARE = [
