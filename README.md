@@ -163,5 +163,5 @@ https://github.com/PhoenixClix
 
 ## API Details
 
-##Aknowledgement
+##Aknowledgements
 
