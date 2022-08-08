@@ -42,7 +42,7 @@ def Login(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         # remember_me = request.POST.get('remember_me')
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
             messages.success(request, f'{user.email} logged in successfully!')
