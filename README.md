@@ -92,8 +92,8 @@ Project is : *in progress*
 ## Contributors
 
 __Designers__ <br/>
-Itepu precious eden
-https://github.com/preciousitepu
+*Itepu precious eden
+*https://github.com/preciousitepu
 
 Timileyin Lasisi
 https://github.com/Timileyin21 
