@@ -14,7 +14,7 @@
   <link href="./css/LandingPage.css" rel="stylesheet">
   <title>GenQR</title>
 </head>
-
+{% block content %}
 <body class="container-fluid">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light py-3" id="mainNav">
@@ -191,16 +191,16 @@
 
         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="bg-white p-3 rounded  h-100">
-            <img src="./images/free-img-2.png" class="img-fluid" alt="frame-1" />
+            <img src="{% static './images/free-img-2.png' %}" class="img-fluid" alt="frame-1" />
             <h3 class="purple-text my-2">Palfinder</h3>
             <p>Find people you might know around you and also make new
               friends with the Palfinder app, it’s easy to use and also
               completely free.</p>
             <p class="purple-text">Check us out on social media</p>
-            <div>
-              <img src="./images/instagram.png" class="mx-2 my-1" alt="instagram" />
-              <img src="./images/twitter.png" class="mx-2 my-1" alt="twitter" />
-              <img src="./images/linkedin.png" class="mx-2 my-1" alt="linkedin" />
+            <div>{% static '' %}
+              <img src="{% static './images/instagram.png' %}" class="mx-2 my-1" alt="instagram" />
+              <img src="{% static './images/twitter.png' %}" class="mx-2 my-1" alt="twitter" />
+              <img src="{% static './images/linkedin.png' %}" class="mx-2 my-1" alt="linkedin" />
             </div>
             <div class="d-flex my-2">
               <a class="btn white-button my-2 px-4" href="" role="button">Download app</a>
@@ -214,7 +214,7 @@
             <h3 class="purple-text my-2">Freshers Party</h3>
             <p>Are you a fresh student, get to meet fellow fresh students at the
               biggest party on campus, come enjoy and party with top artistes
-              like asake, davido, wizkid and more</p>
+              like Asake, Davido, Wizkid and more</p>
             <p class="purple-text">Check us out on social media</p>
             <div>
               <img src="{% static './images/instagram.png' %}" class="mx-2 my-1" alt="instagram" />
@@ -242,21 +242,21 @@
             <h5 class="purple-text my-2">Lady Brady</h5>
             <p className="my-2">I enjoy using GenQr for my business, it is easy to use and also super
               easy to customise, i have been able to increase my online customers by a
-              significant amount since i started using genqr</p>
+              significant amount since i started using GenQr</p>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img src="{% static './images/testimonal-1.png' %}" class="my-2" alt="...">
-            <h5 class="purple-text my-2">Lady Brady</h5>
+            <h5 class="purple-text my-2">Miss Carosel</h5>
             <p className="my-2">I enjoy using GenQr for my business, it is easy to use and also super
-              easy to customise, i have been able to increase my online customers by a
-              significant amount since i started using genqr</p>
+                easy to customise, i have been able to increase my online customers by a
+                significant amount since i started using GenQr</p>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img src="{% static './images/testimonal-1.png' %}" class="my-2" alt="...">
-            <h5 class="purple-text my-2">Lady Brady</h5>
+            <h5 class="purple-text my-2">Lady Queens</h5>
             <p className="my-2">I enjoy using GenQr for my business, it is easy to use and also super
-              easy to customise, i have been able to increase my online customers by a
-              significant amount since i started using genqr</p>
+                easy to customise, i have been able to increase my online customers by a
+                significant amount since i started using GenQr</p>
           </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -363,7 +363,7 @@
   <footer class="row p-5 bg-deep-purple m-0">
 
     <div class="col m-auto">
-      <a class="navbar-brand my-2" href="./index.html"><img src="./images/qrcode 3.png" alt="logo"
+      <a class="navbar-brand my-2" href="./index.html"><img src="{% static './images/qrcode 3.png' %}" alt="logo"
           class="img-fluid" /></a>
       <p class="my-2">GenQr let’s you generate customizable
         qr codes for business and personal uses
@@ -396,5 +396,7 @@
     crossorigin="anonymous"></script>
 
 </body>
+
+{% endblock %}
 
 </html>

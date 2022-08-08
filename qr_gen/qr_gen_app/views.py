@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
@@ -21,11 +21,10 @@ import authentication.models as User
 #         return redirect ('dashborard?', pk=user.id)
 
 #     return render(request, 'qr_gen_app/dashboard3.html')
-=======
+
 from django.shortcuts import render
 from .models import qrcode_link, qrcode_txt
 
-# Create your views here.
 
 
->>>>>>> db441a9db5c76e85dc4575e17c5742605beb8660
+
