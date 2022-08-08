@@ -10,7 +10,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from .forms import UserForm
 
-
+"""
 # Create your views here.
 def SignUp(request):
     form = CustomUserCreationForm()
@@ -54,6 +54,7 @@ def loginPage(request):
 def log_out(request):
     logout(request)
     return redirect(reverse("authentication:login"))
+"""
 
 
 @login_required(login_url="login")
