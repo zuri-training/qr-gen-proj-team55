@@ -91,8 +91,7 @@ Project is : *in progress*
 
 ## Contributors
 
-__Designers__ <br/><br/>
-
+__Designers__ <br/>
 * Itepu precious eden
  `https://github.com/preciousitepu`
 
@@ -131,9 +130,9 @@ __Designers__ <br/><br/>
 
 * Oluwabusayo Basirat Atiku
 `https://github.com/Busayoatiku`
+<br/>
 
-__BackEnd Contributors__ <br/><br/>
-
+__BackEnd Contributors__ <br/>
 * David Ilori
 `https://github.com/Ddluwole`
 
@@ -145,10 +144,9 @@ __BackEnd Contributors__ <br/><br/>
 
 * Dighomanor Jeremiah
 `http://github.com/Digho007`
+<br/>
 
-
-__FrontEnd Contributors__ <br/><br/>
-
+__FrontEnd Contributors__ <br/>
 * Mark nehemiah
 `http://github.com/markben2122`
 
