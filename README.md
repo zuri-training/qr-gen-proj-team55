@@ -39,10 +39,11 @@ The project is was built using the ![Visual Studio Code](https://img.shields.io/
  
 ## Contributors Guide
 
-1. Visit the Repository to the Project on Github Website: https://github.com/zuri-training/qr-gen-proj-team55
+1. Visit the Repository to the Project on Github Website `https://github.com/zuri-training/qr-gen-proj-team55`
 2. Fork the repository: Click the "Fork" button on the upper right corner of the Repo page.*
 3. Make a local clone by: 
-     Copying the URL for the forked Repo "https://github.com/zuri-training/qr-gen-proj-team55" <br/>
+     Copying the URL for the forked Repo <br/>
+     `https://github.com/zuri-training/qr-gen-proj-team55` <br/>
      Create a Folder on your Local machine for the project <br/>
      Open Command prompt / Terminal in the same folder location <br/>
      In your Terminal, type: <br/>
