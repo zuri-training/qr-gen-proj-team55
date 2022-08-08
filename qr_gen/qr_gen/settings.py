@@ -33,13 +33,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # APP NAMES
     "authentication",
+    "qr_gen_app",
     # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
-    "django_extensions",
-
-    # for qrcode
-    "qr_gen_app"
+    "django_extensions", 
 ]
 
 MIDDLEWARE = [
