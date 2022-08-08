@@ -162,7 +162,7 @@ __FrontEnd Contributors__ <br/>
 * Akobi, Mutiat Adeoti
 `https://github.com/PhoenixClix`
 
-##Relevant Links
+## Relevant Links
 * Figma Design
 * FigJam Design
 * BackEnd Schema 
