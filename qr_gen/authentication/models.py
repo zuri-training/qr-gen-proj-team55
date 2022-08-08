@@ -27,18 +27,17 @@ class CustomUser(AbstractUser):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-
     objects = MyUserManager()
 
     def __str__(self):
         return self.email
 
 
-class Dashboard7(models.Model):
+class Profile(models.Model):
     email = models.ForeignKey(CustomUser, max_length=120, on_delete=models.CASCADE)
     name = models.CharField(max_length=120, null=True)
     phone_Number = models.CharField(max_length=120, null=True)
-    avater = models.ImageField(null=True, default="")
+    avater = models.ImageField(null=True, default="avatar.svg")
     bio = models.TextField(null=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)

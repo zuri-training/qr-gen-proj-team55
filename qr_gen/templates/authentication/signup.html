@@ -1,9 +1,10 @@
-{% load "static/styles/signup.css" %} {% block content %}
+{% load "static"%} {% load "styles/signup.css" %} {% block content %}
+
 <section class="leftside">
   <div class="logo">
-    <img class="logo" src="images/qrcode2.png" alt="" />
+    <img class="logo" src="{{ images/qrcode2.png }}" alt="" />
   </div>
-  <img class="heroimg" src="images/amico.png" alt="frontimg" />
+  <img class="heroimg" src="{{ images/amico.png }}" alt="frontimg" />
   <h2>Welcome</h2>
   <p>
     Sign up into GenQr to activate and have easy and well defined accessibility
