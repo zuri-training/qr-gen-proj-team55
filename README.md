@@ -25,20 +25,22 @@ With the evolution of Technology, quick access to service using an encrypted met
 
 ## Framework for building
 The project is was built using the ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) code Editor and the following technologies were used: <br/>
+* __Project Management and Version Control__<br/>
+        ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 * __Design__<br/>
         ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 * __Frontend__<br/>
       ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
       ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
       ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
 * __Backend__<br/>
         ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
         ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+* __Database__<br/>
+        ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
  
 ## Contributors Guide
-
 1. Visit the Repository to the Project on Github Website `https://github.com/zuri-training/qr-gen-proj-team55`
 2. Fork the repository: Click the "Fork" button on the upper right corner of the Repo page.*
 3. Make a local clone by: 
@@ -161,8 +163,16 @@ __FrontEnd Contributors__ <br/>
 `https://github.com/PhoenixClix`
 
 ##Relevant Links
+* Figma Design
+* FigJam Design
+* BackEnd Schema 
+* Design Documentation
+
 
 ## API Details
 
 ##Aknowledgements
+Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
+as implement what they have have in a real life settings.
+
 
