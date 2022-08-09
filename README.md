@@ -169,17 +169,14 @@ __FrontEnd Contributors__ <br/>
 * BackEnd Schema 
 * Design Documentation
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 0c9807562f1c325b9505f67bc6fe5ecdf7a4b860
+
 # FrontEnd Contributors
 Mark nehemiah
 http://github.com/markben2122
-=======
+
 ## API Details
->>>>>>> db441a9db5c76e85dc4575e17c5742605beb8660
+
 
 ## Acknowledgements
 Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
