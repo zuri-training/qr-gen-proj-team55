@@ -29,6 +29,7 @@
     gap: 2rem;
     box-shadow: 0px 0px 10px 0px rgb(128 128 128 / 15%);
     border-radius: 1rem;
+    /* width: calc(150px + 2rem); */
 }
 
 .img-code img{
@@ -42,7 +43,7 @@
 
 
 .cta-section{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -54,7 +55,7 @@
     color: white;
     font-size: 20px;
     font-weight: 500;
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     border-radius: .5rem;
     border: none;
     /* display: block; */
@@ -83,9 +84,7 @@
     gap: 3rem;
     margin-top: 1rem;
 }
-.tracker-wrapper{
-    width: 27rem;
-}
+
 
 .tracker{
     background-color: white;
@@ -93,10 +92,11 @@
     display: flex;
     align-items: center;
     padding: 1rem;
+    justify-content: space-between;
     gap: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    width: 100%;
+    /* max-width: 27rem; */
 }
 
 .track-code{
@@ -107,6 +107,41 @@
 
 .arrow{
     margin-left: auto;
+}
+
+@media screen and (max-width: 620px){
+
+    .activity-container{
+        min-width: 100vw;
+        padding: 3rem 1rem;
+        font-size: 14px;
+    }
+
+    .qr-profile{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    } 
+    
+
+    .track-container{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .tracker{
+        min-width: 0;
+    }
+
+    .img-code{
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .img-code img{
+        width: 105px;
+    }
+
 }
 
 
