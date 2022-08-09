@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import qrcode_business, qrcode_appDownload, qrcode_event
 
-# Create your views here.
-
+def landing_page(request):
+    return render(request, "qr_code_app/LandingPage.html")
 
