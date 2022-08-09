@@ -1,0 +1,7 @@
+My name is Efe Ekojawe.
+I was assigned the role of designing the API documentation page.
+I carried out this task by creating wireframes of how the page would look like aesthically.
+I also worked alongside other team memebers in carrying out this task.
+I also ensured that the designs were understood by the developers to carry out the task effectively.
+Here is the link to the figma board where you can see the API documentation pages:
+https://www.figma.com/file/h7JtB8y0EXmNiTBy3CDWYx/Team-55-Documentation?node-id=0%3A1
