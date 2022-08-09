@@ -1,5 +1,11 @@
 # Repository for Team 55 QR_Generator
-
+<div>
+<p align="center">
+  <a href="" rel="noopener">
+ <img src="Frontend/images/qrcode 2.png" alt="Project logo"></a>
+</p>
+</div>
+<h1></h1>
 
 ## Table of Contents
 
@@ -24,7 +30,9 @@ With the evolution of Technology, quick access to service using an encrypted met
 
 
 ## Framework for building
-The project is was built using the ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) code Editor and the following technologies were used: <br/>
+
+* __IDE__ </br>
+The project is was built using the ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) Editor and the following technologies were used: <br/>
 * __Project Management and Version Control__<br/><br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 * __Design__<br/><br/>
