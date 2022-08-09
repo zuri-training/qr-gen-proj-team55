@@ -1,2 +1,6 @@
-My name is Uduak Oscar i was assigned the role as the design team lead.
+My name is Uduak Oscar I was assigned the role as the design team lead.
 During the course of the project phase I created the style guide for the project and was assisted by a team.(https://www.figma.com/file/h4z1WucYksn2jffHUW4VDE/Zuri-proj_team_55-team-library?node-id=0%3A1)
+For the design i designed the signup and login screens
+I also did the overview of all the screens, their alignment, typography, color as well as flow(https://www.figma.com/file/h4z1WucYksn2jffHUW4VDE/Zuri-proj_team_55-team-library?node-id=497%3A143)
+i made sure everyone got along with each other,and everyone got a task.
+solved every difficulty everyone had, such as inspirational issues alignent and the general aesthetic 
