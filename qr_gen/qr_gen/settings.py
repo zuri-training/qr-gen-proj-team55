@@ -13,20 +13,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
+SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 
 # # SECURITY WARNING: don't run with debug turned on in production!
 
-# DEBUG = config("DJANGO_DEBUG", default=True)
-
 # DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-
-
-# DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-
-SECRET_KEY = 'django-insecure-^z@g_7u*^i5gk6vq=l2yks^jron@z_8m%&428iz4l$hdvrrago'
-DEBUG = True
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
