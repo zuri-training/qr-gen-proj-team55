@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.activity-container{
+    padding: 3rem;
+    background-color: #FAF8FC;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+.qr-profile{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}   
+
+.img-code{
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0px 0px 10px 0px rgb(128 128 128 / 15%);
+    border-radius: 1rem;
+}
+
+.img-code img{
+    width: 150px;
+}
+
+.code-image{
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 0px rgb(128 128 128 / 15%);
+}
+
+
+.cta-section{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cta-btn{
+    background-color: #4B296B;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    /* display: block; */
+    margin-top: 20px;
+}
+
+.codes-data{
+    padding: 2rem;
+    box-shadow: 0px 0px 10px 0px rgb(128 128 128 / 15%);
+    border-radius: .75rem;
+    background-color: white;
+}
+
+.codes-data p{
+    margin-top: 1.5rem;
+}
+
+.qr-overview{
+    width: 100%;
+}
+
+.track-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+.tracker-wrapper{
+    width: 27rem;
+}
+
+.tracker{
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgb(128 128 128 / 15%);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.track-code{
+    padding: .75rem;
+    background-color: #FAF8FC;
+    border-radius: 3px;
+}
+
+.arrow{
+    margin-left: auto;
+}
+
+
+
+
