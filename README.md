@@ -185,3 +185,18 @@ Special thanks to Zuri Team and I4G for giving every member of this Team the pri
 as implement what they have have in a real life settings.
 
 
+
+# BackEnd Contributors
+David Ilori-
+https://github.com/Ddluwole
+
+Awal Umar-
+https://github.com/drizla01
+
+Joshua Eze-
+http://github.com/Allenkeys
+
+# FrontEnd Contributors
+Samson Vershima Saaikyaa
+http://GitHub.com/Vershima2
+
