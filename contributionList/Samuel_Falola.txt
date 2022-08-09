@@ -1,0 +1,18 @@
+
+My name is Samuel Falola, i am one of the product designers that worked
+on the qr code generation website in Team 55
+
+I worked on the user research for the qr code generattion website, i interviewed
+users of the service and documented my findings on the group figjam board.
+Here is a link to the figjam board
+https://www.figma.com/file/pnbr6wzlXhcPcv0wvKQ80V/qr-gen-55?node-id=0%3A1
+
+I also worked on the landing page of the qr code generation website, i designed
+the wireframe and hi-fi designs of the landing page.
+Here is a link to the figma board for the landing page
+https://www.figma.com/file/h4z1WucYksn2jffHUW4VDE/Zuri-proj_team_55-team-library?node-id=497%3A143
+
+I also worked on the animation for the hero section of the landing page of the 
+qr code generation website.
+Here is a link to the prototype for the hero section
+https://www.figma.com/proto/B1Jgnb5V1IQ8f7SwebAgF8/Zuri-team-55-genqr-landing-page?node-id=40%3A1144&scaling=contain&page-id=0%3A1&starting-point-node-id=40%3A691&show-proto-sidebar=1
