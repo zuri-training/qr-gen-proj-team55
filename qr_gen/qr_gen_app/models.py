@@ -3,10 +3,12 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image
+from django.contrib.auth.models import User
 # Create your models here.
 
 #For business card
 class qrcode_business(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     company = models.CharField(max_length=200)
     about = models.TextField ()
     opening_hours = models.CharField (max_length=200)
@@ -33,6 +35,7 @@ class qrcode_business(models.Model):
 
 #For App Download
 class qrcode_appDownload(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     app_name = models.CharField(max_length=200)
     description = models.TextField ()
     logo = models.ImageField (upload_to='images')
@@ -55,6 +58,7 @@ class qrcode_appDownload(models.Model):
 
 #Event
 class qrcode_event(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     organizer = models.CharField(max_length=200)
     about = models.TextField ()
     event_name = models.CharField(max_length=200)
