@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
 
-class QrGenAppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
+class qr_gen_appConfig(AppConfig):
     name = 'qr_gen_app'
