@@ -2,7 +2,7 @@
 <div>
 <p align="center">
   <a href="" rel="noopener">
- <img src="Frontend/images/qrcode 2.png" alt="Project logo"></a>
+ <img src="Frontend/profiledashboard1/images/qrcode 2.png" alt="Project logo"></a>
 </p>
 </div>
 <h1></h1>
@@ -189,5 +189,6 @@ http://github.com/markben2122
 ## Acknowledgements
 Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
 as implement what they have have in a real life settings.
+
 
 
