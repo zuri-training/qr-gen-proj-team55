@@ -5,5 +5,6 @@ from . import views
 app_name = 'qr_gen_app'
 
 urlpatterns = [
-    path("",views.landing_page, name='home')
+    path("",views.landing_page, name='home'),
+    path("<dashboard3/",views.Dashboard3View, name='dashboard'),
 ]

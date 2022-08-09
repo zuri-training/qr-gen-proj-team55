@@ -3,7 +3,11 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image
+from authentication.models import CustomUser
 # Create your models here.
+
+class QrUser(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
 #For business card
 class qrcode_business(models.Model):

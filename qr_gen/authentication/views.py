@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.utils.safestring import mark_safe
 from django.views.generic import TemplateView
 
-User = CustomUser()
+User = CustomUser
 
 def SignUp(request):
     if request.method == 'POST':

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CustomUser, Dashboard7
+from .models import CustomUser, Profile
 
 admin.site.register(CustomUser)
-admin.site.register(Dashboard7)
+admin.site.register(Profile)
