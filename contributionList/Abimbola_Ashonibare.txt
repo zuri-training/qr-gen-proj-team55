@@ -1,0 +1,22 @@
+My name is Abimbola Ashonibare and I am a product designer.
+I worked along side other product designers, as well as developers on the QR code generation website for team 55.
+
+I worked on developing the style guide that was used in this project along side some other designers.
+I was charged with the responsibility of creating the colour styles which was of utmost important to this project. 
+It was important that we used the right set of colours for the website.
+I created the grid style that was used for this project as well.
+Also, I created all the button styles for both the desktop view and the mobile view. I made sure to create all 
+the various button states as well as shapes.
+
+Here is a link to the figma board that shows the style guide created.
+https://www.figma.com/file/h4z1WucYksn2jffHUW4VDE/Zuri-proj_team_55-team-library?node-id=0%3A1
+
+For the design of the website itself, I worked on the landing page. 
+I ensured the proper alignment of every single item on the website was in line with our 4 point system.
+I also ensured the illustrations used were of the right size for the website. Also, I ensured the font size for 
+the landing page was just perfect.
+I created the landing design for the mobile view as well.
+Also, I ensured the overall aesthetics of the landing page was beautiful.
+
+Here is a link to the figma board for the landing page.
+https://www.figma.com/file/h4z1WucYksn2jffHUW4VDE/Zuri-proj_team_55-team-library?node-id=497%3A143
