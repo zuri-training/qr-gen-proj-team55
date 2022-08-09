@@ -1,68 +1,69 @@
-from django.urls import reverse_lazy
-from django.contrib.auth.decorators import login_required
-
 from .models import CustomUser
-from .forms import CustomUserCreationForm
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, logout
-from django.urls import reverse
-from django.http import HttpResponse
 from django.contrib import messages
-from .forms import UserForm
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import redirect, render
+from django.utils.safestring import mark_safe
+from django.views.generic import TemplateView
 
+User = CustomUser
 
-# Create your views here.
 def SignUp(request):
-    form = CustomUserCreationForm()
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        cnfrm_password = request.POST.get('cnfrm_password')
+        print(email)
+        print(password)
 
-    if request.method == "POST":
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            login(request, user)
-            return redirect("home")
-    else:
-        messages.error(request, "An error occurred during registration")
-    return render(request, "authentication/signup.html", {"form": form})
+        if password != cnfrm_password:
+            messages.error(request, 'Passwords do not match!')
+
+        
+
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Email already exists")
+            return redirect('authentication:signup')
+
+        user = User.objects.create(email=email)
+        user.set_password(password)
+        user.save()
+        login(request,user)
+        return redirect('authentication:home')
+    return render(request, 'authentication/registration.html')
 
 
-def loginPage(request):
-    page = "login"
-    User = CustomUser
+def Login(request):
     if request.user.is_authenticated:
-        return redirect("home")
+        messages.info(request, mark_safe(f'You are already logged in as <b>{request.user.email}</b>.' ))
+        return redirect('authentication:home')
 
-    if request.method == "POST":
-        email = request.POST.get("email").lower()
-        password = request.POST.get("password")
-
-        try:
-            user = User.object.object.get(email.email)
-        except:
-            messages.error(request, "User does not exist")
-
-        user = authenticate(request, email=email, password=password)
-        if user is not None:
+    username = ""
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        print(email)
+        print(password)
+        # remember_me = request.POST.get('remember_me')
+        user = authenticate(request, username=email, password=password)
+        if user:
             login(request, user)
-            return redirect("home")
+            messages.success(request, f'{user.email} logged in successfully!')
+            return redirect('authentication:home')
+
+            # if not remember_me:
+            #     request.session.set_expiry(0)
+            # return redirect('website:index')
         else:
-            messages.error(request, "Username or password does not exit")
-    context = {"page": page}
-    return render(request, "authentication/login_register.html", context)
+            messages.warning(request, 'Please check your credentials')
+
+    return render(request, 'authentication/login.html')
 
 
-def log_out(request):
+def Logout(request):
     logout(request)
-    return redirect(reverse("authentication:login"))
+    messages.success(request, 'You have logged out successfully!')
+    return redirect('authentication:home')
 
 
-@login_required(login_url="login")
-def updateUser7(request):
-    user = request.user
-    form = UserForm(instance=user)
-    if request.method == "POST":
-        form = UserForm(request.POST, request.FILES, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect("user-profile", pk=user.id)
-    return render(request, "authentication/user-update.html", {"form": form})
+class HomePage(TemplateView):
+    template_name = 'authentication/index.html'
