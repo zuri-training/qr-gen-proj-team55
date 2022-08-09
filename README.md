@@ -2,7 +2,7 @@
 <div>
 <p align="center">
   <a href="" rel="noopener">
- <img src="Frontend/images/qrcode 2.png" alt="Project logo"></a>
+ <img src="Frontend/profiledashboard1/images/qrcode 2.png" alt="Project logo"></a>
 </p>
 </div>
 <h1></h1>
