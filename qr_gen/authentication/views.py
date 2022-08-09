@@ -30,7 +30,7 @@ def SignUp(request):
         user.set_password(password)
         user.save()
         login(request, user)
-        return redirect("authentication:login")
+        return redirect("authentication:home")
     return render(request, "authentication/signup.html")
 
 
@@ -40,7 +40,7 @@ def Login(request):
             request,
             mark_safe(f"You are already logged in as <b>{request.user.email}</b>."),
         )
-        return redirect("authentication:home")
+        return redirect("authentication:login")
 
     username = ""
     if request.method == "POST":
