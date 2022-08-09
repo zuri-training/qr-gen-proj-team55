@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" {% static 'maindashboard.css' %}">
 </head>
 <body>
     <div class="activity-container">
@@ -14,7 +16,7 @@
 
             <div class="img-code">
                 <div class="code-image">
-                    <img src="/images/Group.png" alt="qr-code image">
+                    <img src="{% static '/images/mainqr.png' %}" alt="qr-code image">
                 </div>
                 <div  class="cta-section">
                     <p class="cta-text">Sorry you do not have any active QR code. Generate one to see it active.</p>
@@ -41,7 +43,7 @@
                 <div class="tracker-wrapper">
                     <div class="tracker">
                         <div class="track-code">
-                            <img src="/images/code-sm.png" alt="" srcset="">
+                            <img src=" {% static '/images/code-sm.png' %} " alt="" srcset="">
                         </div>
                         <div>
                             <p style="font-size: 36px; font-weight:600; ">0</p>
@@ -52,37 +54,37 @@
 
                     <div class="tracker">
                         <div class="track-code">
-                            <img src="/images/archive.png" alt="" srcset="">
+                            <img src=" {% static '/images/archive.png' %} " alt="" srcset="">
                         </div>
                         <div>
                             <p style="font-size: 36px; font-weight:600; ">0</p>
                             <p style="font-size: 14px; font-weight:500; ">Archived QR codes</p>
                         </div>
-                        <img class="arrow"  src="/images/arrow-right.png" alt="">
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
                     </div>
                 </div>
                 <div class="tracker-wrapper">
 
                     <div class="tracker">
                         <div class="track-code">
-                            <img src="/images/active.png" alt="" srcset="">
+                            <img src="{% static '/images/active.png' %}" alt="" srcset="">
                         </div>
                         <div>
                             <p style="font-size: 36px; font-weight:600; ">0</p>
                             <p style="font-size: 14px; font-weight:500; ">Active QR codes</p>
                         </div>
-                        <img class="arrow"  src="/images/arrow-right.png" alt="">
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
                     </div>
 
                     <div class="tracker">
                         <div class="track-code">
-                            <img src="/images/Vector.png" alt="" srcset="">
+                            <img src="{% static '/images/Vector.png' %}" alt="" srcset="">
                         </div>
                         <div>
                             <p style="font-size: 36px; font-weight:600; ">0</p>
                             <p style="font-size: 14px; font-weight:500; ">Closed QR codes</p>
                         </div>
-                        <img class="arrow"  src="/images/arrow-right.png" alt="">
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
                     </div>
 
                 </div>
