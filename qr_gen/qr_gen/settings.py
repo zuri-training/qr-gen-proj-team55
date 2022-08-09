@@ -20,6 +20,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 
+
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 AUTH_USER_MODEL = "authentication.CustomUser"
 # Application definition
@@ -36,7 +37,7 @@ INSTALLED_APPS = [
     # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
-    "django_extensions",
+    "django_extensions", 
 ]
 
 MIDDLEWARE = [
