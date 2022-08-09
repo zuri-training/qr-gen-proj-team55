@@ -1,4 +1,4 @@
-{% load 'static'}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <header class="friz">
-        <img class="logo" src="{% static 'images/qrcode 2.png' %}" alt="">
+        <img class="logo" src="{% static '/images/qrcode 2.png' %}" alt="">
         <div class=>
            
     <!-- <form action="" class="searchbar">
@@ -24,7 +24,7 @@
         <input type="text" placeholder="Search" >
     </form> -->
     <div class= sidenav>
-    <a class="dashboard" href=""><img class="dashimg" src="{% static '/.images/ri-dashboard-fill.png' %}" alt=""><p>Dashboard</p></a>
+    <a class="dashboard" href=""><img class="dashimg" src="{% static './images/ri-dashboard-fill.png' %}" alt=""><p>Dashboard</p></a>
     <a class="generate" href=""><img class="generateimg" src="{% static './images/ri-qr-code-line.png' %}" alt=""><p>Generate QR</p></a>
     <a class="group" href=""><img class="groupimg" src="{% static './images/Group.jpg' %}" alt=""><p>Overview </p></a> 
     <div class="drop"><i class="fa-solid fa-caret-down"> 
@@ -52,7 +52,8 @@
     <div class="profilepic"></div>
     <p>Personal Details</p>
     
-    <form  class="fill" action="">
+    <form  class="fill" action="" method="POST">
+        {% csrf_token %}
         <label for="">Full Name</label>
         <input type="text">
         <label for="">Email Address</label>
@@ -67,7 +68,7 @@
         <p>Website Portfolio</p>
         <button class="butt"> Behance</button>
         <input type="text" placeholder="url">
-        <input class="wide" type="text"  placeholder="  website url">
+        <input class="wide" type="text"  placeholder="website url">
     </form>
 
     <form  class="lowbar" action="">
@@ -75,11 +76,7 @@
        <button class="sndbut">Twitter</button>
         <input type="text" placeholder="Url">
     </form>
-    /* the create a profile button*/<button class="profile">
-        Create a profile
-    </button><button class="profile">
-        Create a profile
-    </button>
+   <button class="profile">Create a profile</button>
         </div>
     </main>
 

@@ -432,7 +432,6 @@ textarea {
 }
 .profile {
   /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
