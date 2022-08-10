@@ -1,5 +1,5 @@
 {% load static %}
-<html lang="en">
+
   <head>
     <title>GenOR Login</title>
     <!-- Required meta tags -->
@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="{% static './login.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/login.css' %}" />
   </head>
   <body>
     <main>
@@ -41,6 +41,7 @@
             <div class="form-group spacing">
               <label for="firstname">Username</label>
               <input
+                name="email"
                 type="text"
                 id="username"
                 placeholder="........@gmail.com"
@@ -50,7 +51,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" id="password" />
+              <input type="password" name="password" id="password" />
             </div>
           </div>
           <small class="text-light-purple">Forgot password?</small>

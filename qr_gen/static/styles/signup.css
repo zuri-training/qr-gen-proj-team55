@@ -125,17 +125,17 @@ position: absolute;
   width: 575px;
   left:-1px;
   top: 430px;
-background-color: #4b296b;
-border-radius: 8px;
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 17px;
-letter-spacing: 0.005em;
-color: #ffffff;
-border: none;
-cursor: pointer;
+  background-color: #4b296b;
+  border-radius: 8px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 17px;
+  letter-spacing: 0.005em;
+  color: #ffff;
+  border: none;
+  cursor: pointer;
 
 }
 ::placeholder{

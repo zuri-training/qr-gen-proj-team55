@@ -17,20 +17,16 @@ def SignUp(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         cnfrm_password = request.POST.get("cnfrm_password")
-        # print(email)
-        # print(password)
-
         if password != cnfrm_password:
             messages.error(request, "Passwords do not match!")
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email already exists")
             return redirect("authentication:signup")
-
         user = User.objects.create(email=email)
         user.set_password(password)
         user.save()
         login(request, user)
-        return redirect("authentication:home")
+        return redirect("authentication:profile")
     return render(request, "authentication/signup.html")
 
 
@@ -40,27 +36,16 @@ def Login(request):
             request,
             mark_safe(f"You are already logged in as <b>{request.user.email}</b>."),
         )
-        return redirect("qr_gen_app:qr_dashboard")
-
-    username = ""
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
-        print(email)
-        print(password)
-        # remember_me = request.POST.get('remember_me')
         user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
             messages.success(request, f"{user.email} logged in successfully!")
-            return redirect("qr_gen_app:qr_dashboard")
-
-            # if not remember_me:
-            #     request.session.set_expiry(0)
-            # return redirect('website:index')
+            return redirect("authentication:home")
         else:
             messages.warning(request, "Please check your credentials")
-
     return render(request, "authentication/login.html")
 
 
