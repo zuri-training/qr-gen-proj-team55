@@ -76,7 +76,7 @@ position: absolute;
 .signup{
   position: absolute;
   width:556px;
-  height:393px;
+  height:500px;
   left:771px;
   top: 178px;
   
@@ -122,9 +122,9 @@ position: absolute;
   padding:16px 8px;
   gap:10px;
   position: absolute;
-  width: 546px;
-  left:771px;
-  top: 550px;
+  width: 575px;
+  left:-1px;
+  top: 430px;
 background-color: #4b296b;
 border-radius: 8px;
 font-family: 'Manrope';

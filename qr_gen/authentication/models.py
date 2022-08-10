@@ -25,7 +25,7 @@ class CustomUser(AbstractUser):
 
 
 class Profile(models.Model):
-    email = models.ForeignKey(CustomUser, max_length=120, on_delete=models.CASCADE)
+    email = models.OneToOneField(CustomUser, max_length=120, on_delete=models.CASCADE)
     name = models.CharField(max_length=120, null=True)
     phone_Number = models.CharField(max_length=120, null=True)
     avater = models.ImageField(null=True, default="")

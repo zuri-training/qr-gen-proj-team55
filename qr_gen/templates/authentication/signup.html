@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup page</title>
-    <link rel="stylesheet" href="{% static 'styles/signup.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/signup.css' %}" />
     <!-- <link rel="stylesheet" href="script.js" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,41 +41,25 @@
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="John Doe" />
         <label for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="....@gmail.com"
-        />
+        <input type="email" name="email" placeholder="....@gmail.com" />
         <label for="Password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="********"
-        />
+        <input type="password" name="password" placeholder="********" />
         <label for=" Confirm Password">Confirm Password</label>
-        <input
-          type="password"
-          name="cnfrm_password"
-          id="cnfrm_password"
-          placeholder="********"
-        />
+        <input type="password" name="cnfrm_password" placeholder="********" />
 
         <button>
-          <a href="{% url 'authentication:profile' %}"></a> Sign Up
+          <a href="{% url 'authentication:profile' %}">Sign Up</a>
         </button>
       </form>
-
       <form class="box" action="">
         <input type="checkbox" />
         <label for="">By using this , you agree to the term of users</label>
       </form>
       <div class="end">
-        <button>
+        <p>
           You already have an account?
-          <a href="authentication:login.html">LOGIN</a>
-        </button>
+          <a href="{% url 'authentication:login' %}">LOGIN</a>
+        </p>
       </div>
     </main>
   </body>

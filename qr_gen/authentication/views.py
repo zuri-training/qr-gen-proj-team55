@@ -1,4 +1,3 @@
-from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
 from .models import CustomUser
@@ -7,7 +6,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib import messages
-from .forms import UserForm
+
+# from .forms import UserForm
 from django.views.generic import TemplateView
 
 User = CustomUser
@@ -71,12 +71,10 @@ class HomePage(TemplateView):
 
 @login_required(login_url="login")
 def ProfileUpdate(request):
-    user = request.user
-    form = UserForm(instance=user)
     if request.method == "POST":
-        form = UserForm(request.POST, request.FILES, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect("user-profile", pk=user.id)
-
-    return render(request, "authentication/profile.html", {"form": form})
+        fullname = request.POST.get("fullname")
+        email = request.POST.get("email")
+        number = request.POST.get("number")
+        user = User.save()
+        messages.success(request, "Welcome,You can now Generate QR ")
+    return render(request, "qr_gen_app/profile.html")
