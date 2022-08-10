@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("authentication.urls")),
-    path("qr_dashboard/", include("qr_gen_app.urls")),
+    path("", include("qr_gen_app.urls")),
 
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

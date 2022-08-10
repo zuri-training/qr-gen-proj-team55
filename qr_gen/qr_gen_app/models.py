@@ -24,7 +24,7 @@ class BaseModel(models.Model):
         qrcode_img = qrcode.make(self.url)
         canvas = Image.new("RGB", qrcode_img.size, "white")
         canvas.paste(qrcode_img)
-        fname = f"qr_code-{self.id}-{self.name}.png"
+        fname = f"qr_code-{self.created_at}-{self.QRcode_name}.png"
         buffer = BytesIO()
         canvas.save(buffer, "PNG")
         self.qr_code.save(fname, File(buffer), save=False)
