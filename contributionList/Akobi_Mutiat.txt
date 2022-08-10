@@ -1,0 +1,14 @@
+
+I am Akobi, Mutiat Adeoti.
+I worked in my team as a developer.
+I worked along side other developers and the product designers, on the QR code generation web application for team 55.
+
+I worked on writing the views for the featured functions of this app.
+I did proof-reading of some of the files and made corrections in places I deemed necesary.
+I also reshuffled files and folders for accessibility of the team and declutering of the repository.
+I worked on the first presentation and will be presenting the final presentation.
+
+The following are the links to my commits so far:
+
+https://github.com/zuri-training/qr-gen-proj-team55/pull/30
+https://github.com/zuri-training/qr-gen-proj-team55/pull/16
