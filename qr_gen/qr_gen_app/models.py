@@ -4,6 +4,10 @@ from io import BytesIO
 from django.core.files import File
 from PIL import Image
 from authentication.models import CustomUser
+<<<<<<< HEAD
+=======
+
+>>>>>>> auth
 # Create your models here.
 
 
@@ -13,7 +17,6 @@ class BaseModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     qr_code = models.ImageField(upload_to="qr_codes", blank=True)
-
 
     class Meta:
         abstract = True
@@ -32,15 +35,14 @@ class BaseModel(models.Model):
         super().save(*args, **kwargs)
 
 
-
-#For business card
+# For business card
 class QrcodeBusiness(BaseModel):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     company = models.CharField(max_length=200)
-    about = models.TextField ()
-    opening_hours = models.CharField (max_length=200)
-    address = models.CharField (max_length=200)
-    email = models.EmailField (max_length=254)
+    about = models.TextField()
+    opening_hours = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=12)
     # logo = models.ImageField (upload_to='images')
     # url = models.URLField(max_length=200)
@@ -60,11 +62,11 @@ class QrcodeBusiness(BaseModel):
     #     canvas.close()
     #     super().save(*args, **kwargs)
 
-#For App Download
+# For App Download
 class QrcodeAppDownload(models.Model):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     app_name = models.CharField(max_length=200)
-    description = models.TextField ()
+    description = models.TextField()
     # logo = models.ImageField (upload_to='images')
     # url = models.URLField(max_length=200)
     # qr_code = models.ImageField(upload_to="qr_codes", blank=True)
@@ -83,14 +85,14 @@ class QrcodeAppDownload(models.Model):
     #     canvas.close()
     #     super().save(*args, **kwargs)
 
-#Event
+# Event
 class QrcodeEvent(BaseModel):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     organizer = models.CharField(max_length=200)
-    about = models.TextField ()
+    about = models.TextField()
     event_name = models.CharField(max_length=200)
-    venue = models.CharField (max_length=200)
-    organizer_email = models.EmailField (max_length=254)
+    venue = models.CharField(max_length=200)
+    organizer_email = models.EmailField(max_length=254)
     organizer_phone = models.CharField(max_length=12)
     # logo = models.ImageField (upload_to='images')
     # qr_code = models.ImageField(upload_to="qr_codes", blank=True)
