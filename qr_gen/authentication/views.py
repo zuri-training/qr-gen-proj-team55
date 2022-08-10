@@ -12,8 +12,6 @@ def SignUp(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         cnfrm_password = request.POST.get('cnfrm_password')
-        print(email)
-        print(password)
 
         if password != cnfrm_password:
             messages.error(request, 'Passwords do not match!')
