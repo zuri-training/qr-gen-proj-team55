@@ -9,7 +9,7 @@ from authentication.models import CustomUser
 
 class BaseModel(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
+    QRcode_name = models.CharField(max_length=255)
     url = models.URLField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
