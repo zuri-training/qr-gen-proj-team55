@@ -33,7 +33,7 @@ def SignUp(request):
 def Login(request):
     if request.user.is_authenticated:
         messages.info(request, mark_safe(f'You are already logged in as <b>{request.user.email}</b>.' ))
-        return redirect('authentication:home')
+        return redirect('qr_gen_app:qr_dashboard')
 
     username = ""
     if request.method == 'POST':
@@ -46,7 +46,7 @@ def Login(request):
         if user:
             login(request, user)
             messages.success(request, f'{user.email} logged in successfully!')
-            return redirect('authentication:home')
+            return redirect('qr_gen_app:qr_dashboard')
 
             # if not remember_me:
             #     request.session.set_expiry(0)

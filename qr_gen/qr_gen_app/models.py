@@ -10,7 +10,7 @@ from authentication.models import CustomUser
 class BaseModel(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_add_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     qr_code = models.ImageField(upload_to="qr_codes", blank=True)
 
