@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'maindashboard.css' %}">
+</head>
+<body>
+    <div class="activity-container">
+
+        <div class="qr-profile">
+
+            <div class="img-code">
+                <div class="code-image">
+                    <img src="{% static '/images/mainqr.png' %}" alt="qr-code image">
+                </div>
+                <div  class="cta-section">
+                    <p class="cta-text">Sorry you do not have any active QR code. Generate one to see it active.</p>
+                    <button class="cta-btn" type="submit">Generate code</button>
+                </div>
+            </div>
+
+            <div class="codes-data">
+                <h4>QR codes</h4>
+                <p>There are no available qr codes now</p>
+            </div>
+
+        </div>
+
+
+        <div class="qr-overview">
+            
+            <div class="overview-heading">
+                <h4>Overview</h4>
+            </div>
+
+            <div class="track-container">
+
+                <div class="tracker-wrapper">
+                    <div class="tracker">
+                        <div class="track-code">
+                            <img src=" {% static '/images/code-sm.png' %} " alt="" srcset="">
+                        </div>
+                        <div>
+                            <p style="font-size: 36px; font-weight:600; ">0</p>
+                            <p style="font-weight:500; ">Total QR codes</p>
+                        </div>
+                        <img class="arrow" src="/images/arrow-right.png" alt="">
+                    </div>
+
+                    <div class="tracker">
+                        <div class="track-code">
+                            <img src=" {% static '/images/archive.png' %} " alt="" srcset="">
+                        </div>
+                        <div>
+                            <p style="font-size: 36px; font-weight:600; ">0</p>
+                            <p style="font-weight:500; ">Archived QR codes</p>
+                        </div>
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="tracker-wrapper">
+
+                    <div class="tracker">
+                        <div class="track-code">
+                            <img src="{% static '/images/active.png' %}" alt="" srcset="">
+                        </div>
+                        <div>
+                            <p style="font-size: 36px; font-weight:600; ">0</p>
+                            <p style="font-weight:500; ">Active QR codes</p>
+                        </div>
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
+                    </div>
+
+                    <div class="tracker">
+                        <div class="track-code">
+                            <img src="{% static '/images/Vector.png' %}" alt="" srcset="">
+                        </div>
+                        <div>
+                            <p style="font-size: 36px; font-weight:600; ">0</p>
+                            <p style="font-weight:500; ">Closed QR codes</p>
+                        </div>
+                        <img class="arrow"  src="{% static '/images/arrow-right.png' %}" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
