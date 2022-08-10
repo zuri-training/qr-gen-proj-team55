@@ -40,22 +40,27 @@ def Login(request):
             request,
             mark_safe(f"You are already logged in as <b>{request.user.email}</b>."),
         )
-        return redirect("authentication:login")
+        return redirect("qr_gen_app:qr_dashboard")
 
     username = ""
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
+        print(email)
+        print(password)
         # remember_me = request.POST.get('remember_me')
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
             messages.success(request, f"{user.email} logged in successfully!")
+            return redirect("qr_gen_app:qr_dashboard")
+
             # if not remember_me:
             #     request.session.set_expiry(0)
             # return redirect('website:index')
         else:
             messages.warning(request, "Please check your credentials")
+
     return render(request, "authentication/login.html")
 
 

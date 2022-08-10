@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# from .models import qrcode_business, qrcode_appDownload, qrcode_event
+
+class qr_dashboardview(TemplateView):
+    template_name = "qr_gen_app/maindashboard.html"
 
 
-# def landing_page(request):
-# return render(request, "qr_code_app/LandingPage.html")
+class appdownload(TemplateView):
+    template_name = "qr_gen_app/sdashboard.html"

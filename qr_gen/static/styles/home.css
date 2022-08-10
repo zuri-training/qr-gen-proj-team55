@@ -1,56 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #FAF8FC;
+  background-color: #faf8fc;
 }
 .container-fluid {
-    padding: 0;
+  padding: 0;
 }
 header .nav-link {
-    color: #0D0A0F !important;
+  color: #0d0a0f !important;
 }
 
 .purple-button {
-    background: #4B296B;
-    color: white;
-border-radius: 8px;
+  background: #4b296b;
+  color: white;
+  border-radius: 8px;
 }
 
 .white-button {
-    background: white;
-    color: #4B296B;
-border-radius: 8px;
-border: 1px solid #4B296B;
+  background: white;
+  color: #4b296b;
+  border-radius: 8px;
+  border: 1px solid #4b296b;
 }
 
 .bg-grey-purple {
-    background: #DBD4E1;
+  background: #dbd4e1;
 }
 
 .bg-deep-purple {
-    background: #3F2259;
+  background: #3f2259;
 }
 
 .bg-white {
-    background: #fff;
+  background: #fff;
 }
 
 .purple-text {
-    color: #4B296B;
+  color: #4b296b;
 }
 
 .white-text {
-    color: white;
+  color: white;
 }
 
 #features {
-    color: white;
+  color: white;
 }
 
 footer {
-    color: white;
+  color: white;
 }
