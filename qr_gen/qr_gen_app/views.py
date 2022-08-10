@@ -1,4 +1,5 @@
 
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
@@ -9,8 +10,8 @@ from django.views.generic import TemplateView
 
 
 
-class qr_dashboardview(TemplateView):
-    template_name = 'qr_gen_app/maindashboard.html'
+# class qr_dashboardview(TemplateView):
+#     template_name = 'qr_gen_app/maindashboard.html'
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
@@ -43,7 +44,12 @@ def qr_dashboard3view(request):
 
 
 
+from django.shortcuts import render
+from django.views.generic import TemplateView
 
-def landing_page(request):
-    return render(request, "qr_code_app/LandingPage.html")
 
+class qr_dashboardview(TemplateView):
+    template_name = 'qr_gen_app/maindashboard.html'
+
+class appdownload(TemplateView):
+    template_name = 'qr_gen_app/sdashboard.html'
