@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-   <link rel="stylesheet" href=""> <title>Landing page</title>
-   <link rel="stylesheet" href="index.css">
+    <title>Landing page</title>
+   <link rel="stylesheet" href="{% static 'dashboard3.css' %}">
    <script src="https://kit.fontawesome.com/cf2b35cc7f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="friz">
-        <img class="logo" src="images/qrcode 2.png" alt="">
+        <img class="logo" src="{% static 'images/qrcode 2.png' %}" alt="">
         <div class=>
            
     <!-- <form action="" class="searchbar">
@@ -19,9 +22,9 @@
         <input type="text" class="my-input" placeholder="Search" >
     </form>  -->
     <div class= sidenav>
-    <a class="dashboard" href=""><img class="dashimg" src="images/ri-dashboard-fill.png" alt=""><p>Dashboard</p></a>
-    <a class="generate" href=""><img class="generateimg" src="images/ri-qr-code-line.png" alt=""><p>Generate QR</p></a>
-    <a class="group" href=""><img class="groupimg" src="images/Group.jpg" alt=""><p>Overview </p></a> 
+    <a class="dashboard" href=""><img class="dashimg" src="{% static 'images/ri-dashboard-fill.png' %}" alt=""><p>Dashboard</p></a>
+    <a class="generate" href=""><img class="generateimg" src="{% static 'images/ri-qr-code-line.png' %}" alt=""><p>Generate QR</p></a>
+    <a class="group" href=""><img class="groupimg" src="{% static 'images/Group.jpg' %}" alt=""><p>Overview </p></a> 
     <div class="drop"><i class="fa-solid fa-caret-down"> 
         <ul>
             <li><a href="">Activate</a> </li>
@@ -29,11 +32,11 @@
             <li> <a href="">Closed</a> </li>
         </ul>
     </i></div>
-    <a  class="Documentation" href=""><img class="docimg" src="images/Group (1).png" alt=""><p>Documentation</p></a>
-    <a  class="setting "href=""><img class="setimg"  src="images/ri-settings-4-line.png" alt=""><p>Setting</p></a>
+    <a  class="Documentation" href=""><img class="docimg" src="{% static 'images/Group (1).png' %}" alt=""><p>Documentation</p></a>
+    <a  class="setting "href=""><img class="setimg"  src="{% static 'images/ri-settings-4-line.png' %}" alt=""><p>Setting</p></a>
     </div>
     <div class="logo">
-        <img src="images/qrcode 2.png" alt=""> 
+        <img src="{% static 'images/qrcode 2.png' %}" alt=""> 
     
         <button class="disabled"><a href=""></a> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
   
@@ -41,15 +44,16 @@
         <div class= icon> <i class="fa-solid fa-user"></i></div>
       
 </form>
+{% csrf_token %}
     </div>
     <div>
-        <a class="busi" href="">Business Card</a>
+        <a class="busi" href="{% url 'qr_gen_app:qr_dashboard3' %}">Business Card</a>
          <a class="apps" href="">App Download</a>
           <a class="even" href="">Event invite</a>
     </div>
     <div class="form">
-            <h4 class="">Basic Info</h4><a href="#"><img src="images/Vectory.png" class="yas"></a>
-            <form>
+            <h4 class="">Basic Info</h4><a href="#"><img src="{% static 'images/Vectory.png' %}" class="yas"></a>
+            <form method="POST">
                 <label for="company name" class="name">Company Name</label><br>
                 <input class="text" type="text" name="company name" placeholder="e.g Jumia"><br><br>
                 <label for="fname">About</label><br>
@@ -57,22 +61,22 @@
                 <label for="fname">Opening hours</label><br>
                 <input type="text" id="fname" name="firstname" placeholder="Monday-Friday(9am-6pm)">
             </form><br>
-
-            <h3 class="track"> Contact</h3><a href="#"><img src="images/Group (2).png" class="photo"></a>
-            <h3 class="url"> Web Url</h3><a href="#"><img src="images/Group (2).png" class="phics"></a>
+            
+            <h3 class="track"> Contact</h3><a href=""><img src="{% static 'images/Group (2).png' %}" class="photo"></a>
+            <h3 class="url"> Web Url</h3><a href=""><img src="{% static 'images/Group (2).png' %}" class="phics"></a>
             <!-- <h3 class="brand"> Add image/Brand</h3><a href="#"><img src="images/Vector.png" class="vect"></a> -->
           </div>
           <div class="last">
-           <div class="moon"><img src="images/group3.png" class="gut"></div> 
-           <h3 class="shape"> Shape</h3><a href="#"><img src="images/Vector.png" class="plus"></a>
-            <h3 class="color"> Color</h3><a href="#"><img src="images/Vector.png" class="plan"></a>
-            <h3 class="loga"> Add image/logo</h3><a href="#"><img src="images/Vector.png" class="pet"></a>
+           <div class="moon"><img src="{% static 'images/group3.png' %}" class="gut"></div> 
+           <h3 class="shape"> Shape</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="plus"></a>
+            <h3 class="color"> Color</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="plan"></a>
+            <h3 class="loga"> Add image/logo</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="pet"></a>
 
             <div>
                 <button type="button" class="right">Download QR</button>
                 <button type="submit" class="rate">Generate Code</button>
             </div>
-            <script src="scripts.js"></script>
+            <script src="{% static 'scripts.js' %}"></script>
           </div>
 
 </body>

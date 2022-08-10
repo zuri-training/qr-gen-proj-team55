@@ -50,7 +50,7 @@
     justify-content: space-between;
 }
 
-.cta-btn{
+.cta-btn a{
     background-color: #4B296B;
     color: white;
     font-size: 20px;

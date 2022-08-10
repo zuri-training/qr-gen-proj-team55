@@ -19,10 +19,11 @@
                     <img src="{% static '/images/mainqr.png' %}" alt="qr-code image">
                 </div>
                 <div  class="cta-section">
+                    {% csrf_token %}
                     <p class="cta-text">Sorry you do not have any active QR code. Generate one to see it active.</p>
-                    <button class="cta-btn" type="submit">Generate code</button>
+                    <button class="cta-btn" type="submit"><a href="{% url 'qr_gen_app:qr_dashboard3' %}">Generate code</a></button>
                 </div>
-            </div>
+            </div></a>
 
             <div class="codes-data">
                 <h4>QR codes</h4>
@@ -49,7 +50,7 @@
                             <p style="font-size: 36px; font-weight:600; ">0</p>
                             <p style="font-weight:500; ">Total QR codes</p>
                         </div>
-                        <img class="arrow" src="/images/arrow-right.png" alt="">
+                        <img class="arrow" src="{% static '/images/arrow-right.png' %}" alt="">
                     </div>
 
                     <div class="tracker">
