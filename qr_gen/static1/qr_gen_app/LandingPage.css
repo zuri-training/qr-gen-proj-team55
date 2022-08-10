@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF8FC;
+}
+.container-fluid {
+    padding: 0;
+}
+header .nav-link {
+    color: #0D0A0F !important;
+}
+
+.purple-button {
+    background: #4B296B;
+    color: white;
+border-radius: 8px;
+}
+
+.white-button {
+    background: white;
+    color: #4B296B;
+border-radius: 8px;
+border: 1px solid #4B296B;
+}
+
+.bg-grey-purple {
+    background: #DBD4E1;
+}
+
+.bg-deep-purple {
+    background: #3F2259;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.purple-text {
+    color: #4B296B;
+}
+
+.white-text {
+    color: white;
+}
+
+#features {
+    color: white;
+}
+
+footer {
+    color: white;
+}
