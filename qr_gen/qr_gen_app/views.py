@@ -21,6 +21,6 @@ def QrcodeBusiness_view(request):
         'obj' : obj,
     }
 
-    return render(request, 'qr_gen_app/qrcode_view.html', context)
+    return render(request, 'qr_gen_app/QrcodeBusiness_view.html', context)
 
 
