@@ -4,10 +4,7 @@ from io import BytesIO
 from django.core.files import File
 from PIL import Image
 from authentication.models import CustomUser
-<<<<<<< HEAD
-=======
 
->>>>>>> auth
 # Create your models here.
 
 
@@ -20,6 +17,7 @@ class BaseModel(models.Model):
 
     class Meta:
         abstract = True
+
     # def __str__(self):
     # return str(self.company)
 
@@ -62,6 +60,7 @@ class QrcodeBusiness(BaseModel):
     #     canvas.close()
     #     super().save(*args, **kwargs)
 
+
 # For App Download
 class QrcodeAppDownload(models.Model):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -84,6 +83,7 @@ class QrcodeAppDownload(models.Model):
     #     self.qr_code.save(fname, File(buffer), save=False)
     #     canvas.close()
     #     super().save(*args, **kwargs)
+
 
 # Event
 class QrcodeEvent(BaseModel):
