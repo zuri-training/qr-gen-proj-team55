@@ -1,3 +1,4 @@
+from re import template
 from django.contrib.auth.decorators import login_required
 from django.utils.safestring import mark_safe
 from .models import CustomUser
@@ -13,21 +14,25 @@ from django.views.generic import TemplateView
 User = CustomUser
 # Create your views here.
 def SignUp(request):
+    template_name = "authentication/registration.html"
     if request.method == "POST":
+        name = request.POST.get("name")
         email = request.POST.get("email")
         password = request.POST.get("password")
         cnfrm_password = request.POST.get("cnfrm_password")
         if password != cnfrm_password:
-            messages.error(request, "Passwords do not match!")
+            messages.warning(request, "Passwords do not match!")
+
         if User.objects.filter(email=email).exists():
-            messages.error(request, "Email already exists")
+            messages.INFO(request, "Email already exists")
             return redirect("authentication:signup")
-        user = User.objects.create(email=email)
+
+        user = User.objects.create_user(email=email, password=password)
         user.set_password(password)
         user.save()
         login(request, user)
         return redirect("authentication:profile")
-    return render(request, "authentication/signup.html")
+    return render(request, template_name)
 
 
 def Login(request):
@@ -50,21 +55,23 @@ def Login(request):
 
 
 def Logout(request):
-    logout(request)
-    messages.success(request, "You have logged out successfully!")
+    if request.method == "GET":
+        messages.INFO(request, "You have logged out successfully!")
+        logout(request)
     return redirect("authentication:home")
 
 
 class HomePage(TemplateView):
-    template_name = "authentication/home.html"
+    template_name = "authentication/index.html"
 
 
 @login_required(login_url="login")
 def ProfileUpdate(request):
+    template_name = "authentication/dashboard-signup.html"
     if request.method == "POST":
         fullname = request.POST.get("fullname")
         email = request.POST.get("email")
         number = request.POST.get("number")
         user = User.save()
         messages.success(request, "Welcome,You can now Generate QR ")
-    return render(request, "qr_gen_app/profile.html")
+    return render(request, template_name)
