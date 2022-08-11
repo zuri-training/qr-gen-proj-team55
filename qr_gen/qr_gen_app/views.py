@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
 from authentication.models import CustomUser
@@ -14,7 +14,7 @@ class appdownload(TemplateView):
     template_name = 'qr_gen_app/sdashboard.html'
 
 
-def QrcodeBusiness_view(request):
+def Qrcode_view(request):
     name = "Here is your QR code"
 
     obj = QrcodeBusiness.objects.get(fk=CustomUser)
@@ -23,19 +23,16 @@ def QrcodeBusiness_view(request):
         'name': name,
         'obj' : obj,
     }
-    return render(request, 'qr_gen_app/QrcodeBusiness_view.html', context)
+    return render(request, 'qr_gen_app/Qrcode_view.html', context)
 
 def save_QrcodeAppDownload(request):
     if request.method == "POST":
-        name = request.POST.get("name")
-        link = request.POST.get("link")
-        company = request.POST.get("company")
-        about = request.POST.get("about")
-        hours = request.POST.get("hours")
-        address = request.POST.get("address")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
-        QrcodeBusiness = QrcodeBusiness(QRcode=name,url=link,company=company, about=about, opening_hours=hours,address=address,email=email,phone=phone)
-        QrcodeBusiness.save()
-    return render (request, "QrcodeBusiness_view.html")
+        Aname = request.POST.get("APPname")
+        description = request.POST.get("desc")
+        url = request.POST.get("url")
+        Qname = request.POST.get("QRcode")
+        Inst_1 = QrcodeAppDownload(QRcode_name=Qname,url=url,app_name=Aname,description=description)
+        Inst_1.save()
+        return redirect ('/qrcode')
+    return render (request, "qr_gen_app/sdashboard.html")
 
