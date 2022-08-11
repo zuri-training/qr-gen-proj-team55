@@ -4,8 +4,10 @@ from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
 from authentication.models import CustomUser
 
 
+
 class qr_dashboardview(TemplateView):
-    template_name = 'qr_gen_app/maindashboard.html'
+    template_name = "qr_gen_app/maindashboard.html"
+
 
 class appdownload(TemplateView):
     template_name = 'qr_gen_app/sdashboard.html'
@@ -22,5 +24,4 @@ def QrcodeBusiness_view(request):
     }
 
     return render(request, 'qr_gen_app/QrcodeBusiness_view.html', context)
-
 
