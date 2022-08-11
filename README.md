@@ -172,7 +172,7 @@ __FrontEnd Contributors__ <br/>
 `https://github.com/PhoenixClix`
 
 ## Relevant Links
-* Figma Design
+* Figma Design - `https://www.figma.com/file/65TGG1OYI0nqPJ4EgMdmgn/Untitled?node-id=0%3A1 `
 * FigJam Design
 * BackEnd Schema 
 * Design Documentation

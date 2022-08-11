@@ -24,7 +24,6 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
 
-
 ALLOWED_HOSTS = ["*"]  # To run in any machine
 AUTH_USER_MODEL = "authentication.CustomUser"
 # Application definition
@@ -41,7 +40,7 @@ INSTALLED_APPS = [
     # REST FRAMEWORK
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
-    "django_extensions", 
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
@@ -59,9 +58,7 @@ ROOT_URLCONF = "qr_gen.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            BASE_DIR / "templates",
-        ],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -129,10 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
+MEDIA_URL = "/images/"
+
 STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
-# STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
+MEDIA_ROOT = BASE_DIR / "static" / "Images"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
