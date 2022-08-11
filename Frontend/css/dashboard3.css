@@ -88,3 +88,8 @@ border-radius: 12px;
     color: #7B925F !important;
     border-bottom: 4px solid #7B925F;
 }
+
+.img-warn {
+    color: #A6A4A4;
+    font-size: 14px;
+}
