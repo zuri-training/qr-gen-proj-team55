@@ -5,6 +5,7 @@ from authentication.models import CustomUser
 
 
 
+
 class qr_dashboardview(TemplateView):
     template_name = "qr_gen_app/maindashboard.html"
 

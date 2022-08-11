@@ -1,0 +1,136 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>GenQR</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <link href="{% static 'styles/base.css' %}" rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+</head>
+
+<body>
+
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header_toggle">
+                <i class='bx bx-menu px-2' id="header-toggle"></i>
+                {% comment %} <i class='bx bx-menu px-6' id="header-toggle"></i> {% endcomment %}
+                <img src=" {% static '/images/qrcode 1.png' %}" />
+            </div>
+            <div class="header_img"> <img src="https://randomuser.me/api/portraits/lego/3.jpg" alt=""> </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav_logo">
+                    </a>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link active">
+                            <img src="{% static '/images/dashboard-icon.png' %}" alt="dashboard-icon">
+                            <span class="nav_name">Dashboard</span>
+                        </a>
+                        <a href="#" class="nav_link">
+                            <img src="{% static '/images/generate-qr-icon.png' %}" alt="qr-icon">
+                            <span class="nav_name">Generate QR</span>
+                        </a>
+                        <span href="#" class="nav_link" role='button' data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            <img src="{% static '/images/overview.png' %}" alt="overview-icon">
+                            <span class="nav_name">Overview</span>
+                        </span>
+                        <div class="collapse" id="dashboard-collapse">
+                            <a href="#" class="nav_link active">
+                                <span class="nav_name">Active</span>
+                            </a>
+                            <a href="#" class="nav_link">
+                                <span class="nav_name">Archived</span>
+                            </a>
+                            <a href="#" class="nav_link">
+                                <span class="nav_name">Closed</span>
+                            </a>
+                        </div>
+                        <a href="#" class="nav_link">
+                            <img src="{% static '/images/documentation.png' %}" alt="documentation-icon">
+                            <span class="nav_name">Documentation</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="nav-bottom-div mb-4 ml-2 text-center">
+                    <a href="#" class="nav_link">
+                        <img src="{% static '/images/settings.png' %}" alt="settings-icon">
+                        <span class="nav_name">Settings</span>
+                    </a>
+                    <a href="#" class="nav_link purple-button">
+                        <i class='bx bx-log-out nav_icon mr-5'></i>
+                        <span class="nav_name pe-3">Log Out</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!--Container Main start-->
+        <div class="vh-100 bg-light">
+            {% comment %} <h4>Main Components</h4> {% endcomment %}
+
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        <!--Container Main end-->
+        <script type='text/javascript'
+            src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+        <script type='text/javascript'>
+            document.addEventListener("DOMContentLoaded", function (event) {
+
+                const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                    const toggle = document.getElementById(toggleId),
+                        nav = document.getElementById(navId),
+                        bodypd = document.getElementById(bodyId),
+                        headerpd = document.getElementById(headerId)
+
+                    // Validate that all variables exist
+                    if (toggle && nav && bodypd && headerpd) {
+                        toggle.addEventListener('click', () => {
+                            // show navbar
+                            nav.classList.toggle('show')
+                            // change icon
+                            toggle.classList.toggle('bx-x')
+                            // add padding to body
+                            bodypd.classList.toggle('body-pd')
+                            // add padding to header
+                            headerpd.classList.toggle('body-pd')
+                        })
+                    }
+                }
+
+                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+                /*===== LINK ACTIVE =====*/
+                const linkColor = document.querySelectorAll('.nav_link')
+
+                function colorLink() {
+                    if (linkColor) {
+                        linkColor.forEach(l => l.classList.remove('active'))
+                        this.classList.add('active')
+                    }
+                }
+                linkColor.forEach(l => l.addEventListener('click', colorLink))
+            });
+        </script>
+        <script type='text/javascript'>
+            var myLink = document.querySelector('a[href="#"]');
+            myLink.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        </script>
+
+    </body>
+
+</html>
