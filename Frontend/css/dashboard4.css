@@ -82,6 +82,7 @@ border-radius: 12px;
 
 .dashboard3 .nav-link {
     color: #AEADAF !important;
+    font-size: 14px;
 }
 
 .dashboard3 .nav-link.active {
