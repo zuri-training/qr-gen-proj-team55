@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=" {% static 'maindashboard.css' %}">
+    <link rel="stylesheet" href=" {% static '/styles/maindashboard.css' %}">
 </head>
 <body>
     <div class="activity-container">
@@ -23,7 +23,8 @@
                 </div>
                 <div  class="cta-section">
                     <p class="cta-text">Sorry you do not have any active QR code. Generate one to see it active.</p>
-                    <button class="cta-btn" type="submit">Generate code</button>
+                    <a href=""><button class="cta-btn" type="submit">Generate code</button></a>
+
                 </div>
             </div>
 
@@ -52,7 +53,7 @@
                             <p style="font-size: 36px; font-weight:600; ">0</p>
                             <p style="font-weight:500; ">Total QR codes</p>
                         </div>
-                        <img class="arrow" src="/images/arrow-right.png" alt="">
+                        <img class="arrow" src="{% static '/images/arrow-right.png' %}" alt="">
                     </div>
 
                     <div class="tracker">
