@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="">
+    <title>Gen QR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/dashboard3.css">
+</head>
+
+<body>
+    <main class="container dashboard3">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 d-flex flex-row">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="">Business Card</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="">App Download</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="">Event Invite</a>
+            </li>
+        </ul>
+        <form class="row">
+            <section class="bg-white rounded my-3 col-lg-6">
+                <div class="p-3">
+                    <div class="accordion p-2 rounded" id="accordionExample">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Basic Info
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <div class="form-group spacing">
+                                            <label for="appName">App Name</label>
+                                            <input type="text" id="appName" placeholder="e.g Jumia">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="description">Description</label>
+                                            <input type="text" id="description" placeholder="E-commerce">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="col-lg-6">
+                <div class="bg-white rounded p-3 my-3">
+                    <h4>QR code section</h4>
+                </div>
+            </section>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
+    </script>
+    <script>
+        const fReader = new FileReader();
+        const imgUpload = document.getElementById("imgInp");
+        const imgPreviewPanel = document.getElementById("img-preview-panel");
+        let imgPreviewHtml = ""
+
+        imgUpload.addEventListener('input', (e) => {
+            console.log(e.target.files[0])
+            fReader.readAsDataURL(e.target.files[0]);
+            fReader.onloadend = function (event) {
+                console.log(event.target.result)
+                imgPreviewHtml += `
+    <img class="m-2" width="149px" height="168px" src=${event.target.result} />
+    `
+
+                imgPreviewPanel.innerHTML = imgPreviewHtml
+            }
+        })
+    </script>
+</body>
+
+</html>
