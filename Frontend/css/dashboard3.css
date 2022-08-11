@@ -79,3 +79,12 @@ height: 168px;
 border: 1px dashed #694D84;
 border-radius: 12px;
 }
+
+.dashboard3 .nav-link {
+    color: #AEADAF !important;
+}
+
+.dashboard3 .nav-link.active {
+    color: #7B925F !important;
+    border-bottom: 4px solid #7B925F;
+}
