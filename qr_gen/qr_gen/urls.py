@@ -9,3 +9,14 @@ urlpatterns = [
     path("qr_gen/", include("qr_gen_app.urls")),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # path("", include("qr_gen_app.urls")),
+
+
+# ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# if settings.DEBUG:
+#         urlpatterns += static(settings.MEDIA_URL,
+#                               document_root=settings.MEDIA_ROOT)
+
+# ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
