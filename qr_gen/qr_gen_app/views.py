@@ -25,7 +25,7 @@ def QrcodeBusiness_view(request):
     }
     return render(request, 'qr_gen_app/QrcodeBusiness_view.html', context)
 
-def save_QrcodeBusiness(request):
+def save_QrcodeAppDownload(request):
     if request.method == "POST":
         name = request.POST.get("name")
         link = request.POST.get("link")

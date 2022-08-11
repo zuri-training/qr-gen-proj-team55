@@ -18,19 +18,18 @@
         <h2 class="first">Basic info</h2>
         <form class="app" action="" method="POST">
           {% csrf_token %}
-          <label for="">App Name</label>
-          <input type="text" />
-          <label for="">Description</label>
-          <input type="text" />
-        </form>
+          <label>App Name</label>
+          <input type="text" name= "APPname"/>
+          <label>Description </label>
+          <input type="text" name="Desc"/> <br><br><br><br><br><br><br><br>
 
         <h2 class="second">App link</h2>
-        <form class="comply" action="" method="POST">
-          {% csrf_token %}
-          <label for=""></label>
-          <input type="text" name="" id="" />
-          <label for=""></label>
-          <input type="text" name="" id="" />
+
+          <label>Url</label>
+          <input type="url" name="url" />
+          <label>QRcode name</label>
+          <input type="text" name="QRcode" />
+          <input type= "submit"/>
         </form>
       </section>
     </main>

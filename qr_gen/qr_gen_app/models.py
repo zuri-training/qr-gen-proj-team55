@@ -50,7 +50,7 @@ class QrcodeBusiness(BaseModel):
 
 
 # For App Download
-class QrcodeAppDownload(models.Model):
+class QrcodeAppDownload(BaseModel):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     app_name = models.CharField(max_length=200)
     description = models.TextField()
