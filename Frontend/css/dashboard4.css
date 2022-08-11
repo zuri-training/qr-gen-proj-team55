@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #E5E5E5;
+  }
+  
+  .bg-white {
+    background: white;
+  }
+  
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 0;
+  }
+  
+  .form-group label, p {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="number"],
+  .form-group input[type="email"],
+  textarea, select{
+    border: 1px solid #CFCECF;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .purple-button {
+    background: #4B296B;
+    color: white;
+  border-radius: 8px;
+  }
+  
+  .white-button {
+    /* background: #4B296B; */
+    /* color: white; */
+  border: 1.5px solid #AEADAF;
+border-radius: 8px;
+  }
+  
+.purple-dotted-div {
+    min-width: 149px;
+min-height: 168px;
+border: 1px dashed #694D84;
+border-radius: 12px;
+}
+
+.plus-button {
+    color: #4B296B;
+    font-size: 2.5rem;
+}
+
+.add-button {
+    border: 1.5px solid #AEADAF;
+border-radius: 8px;
+display: inline-block !important;
+}
+
+.purple-dotted-QRdiv {
+    width: 149px;
+height: 168px;
+border: 1px dashed #694D84;
+border-radius: 12px;
+}
+
+.dashboard3 .nav-link {
+    color: #AEADAF !important;
+}
+
+.dashboard3 .nav-link.active {
+    color: #7B925F !important;
+    border-bottom: 4px solid #7B925F;
+}
