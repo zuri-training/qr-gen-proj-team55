@@ -48,6 +48,13 @@
   border-radius: 8px;
   }
   
+  .white-button {
+    /* background: #4B296B; */
+    /* color: white; */
+  border: 1.5px solid #AEADAF;
+border-radius: 8px;
+  }
+  
 .purple-dotted-div {
     min-width: 149px;
 min-height: 168px;
@@ -64,4 +71,11 @@ border-radius: 12px;
     border: 1.5px solid #AEADAF;
 border-radius: 8px;
 display: inline-block !important;
+}
+
+.purple-dotted-QRdiv {
+    width: 149px;
+height: 168px;
+border: 1px dashed #694D84;
+border-radius: 12px;
 }
