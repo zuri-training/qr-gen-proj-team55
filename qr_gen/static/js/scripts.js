@@ -18,9 +18,9 @@ function checkInputs() {
   if (
     nameValue === "" ||
     about.value === "" ||
-    Opening.Value === "" ||
+    Opening.Value === ""
     ) 
-    }
+  
   
     if (fnameValue === "") {
       setError(fname, " Please input your company's name");
@@ -55,3 +55,4 @@ function setError(input, message) {
           const formControl = input.parentElement;
           formControl.className = "form-control success";
       }
+}
