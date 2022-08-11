@@ -1,5 +1,8 @@
+{% extends 'base.html' %}
 {% load static %}
 
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=" {% static 'maindashboard.css' %}">
+    <link rel="stylesheet" href=" {% static '/styles/maindashboard.css' %}">
 </head>
 <body>
     <div class="activity-container">
@@ -19,11 +22,11 @@
                     <img src="{% static '/images/mainqr.png' %}" alt="qr-code image">
                 </div>
                 <div  class="cta-section">
-                    {% csrf_token %}
                     <p class="cta-text">Sorry you do not have any active QR code. Generate one to see it active.</p>
-                    <button class="cta-btn" type="submit"><a href="{% url 'qr_gen_app:qr_dashboard3' %}">Generate code</a></button>
+                    <a href=""><button class="cta-btn" type="submit">Generate code</button></a>
+
                 </div>
-            </div></a>
+            </div>
 
             <div class="codes-data">
                 <h4>QR codes</h4>
@@ -102,3 +105,4 @@
     
 </body>
 </html>
+{% endblock content %}

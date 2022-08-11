@@ -50,7 +50,7 @@
     justify-content: space-between;
 }
 
-.cta-btn a{
+.cta-btn{
     background-color: #4B296B;
     color: white;
     font-size: 20px;
@@ -58,6 +58,7 @@
     padding: 1rem 1rem;
     border-radius: .5rem;
     border: none;
+    width: 100%;
     /* display: block; */
     margin-top: 20px;
 }
@@ -85,6 +86,9 @@
     margin-top: 1rem;
 }
 
+.tracker-wrapper{
+    width: 50%;
+}
 
 .tracker{
     background-color: white;
@@ -129,6 +133,10 @@
         gap: 0;
     }
 
+    .tracker-wrapper{
+        width: 100%;
+    }
+
     .tracker{
         min-width: 0;
     }
@@ -144,6 +152,17 @@
 
 }
 
+@media screen and (min-width: 1444px){
+
+    .track-container {
+        width: 79%;
+    }
+
+
+    .tracker-wrapper{
+        width: 50%;
+    }
+}
 
 
 

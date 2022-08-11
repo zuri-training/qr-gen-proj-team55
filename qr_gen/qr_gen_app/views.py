@@ -46,6 +46,8 @@ def qr_dashboard3view(request):
 
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
+
 
 
 class qr_dashboardview(TemplateView):
