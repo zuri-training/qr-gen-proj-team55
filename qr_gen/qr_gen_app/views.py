@@ -9,4 +9,4 @@ class qr_dashboardview(TemplateView):
 
 
 class appdownload(TemplateView):
-    template_name = "qr_gen_app/sdashboard.html"
+    template_name = "qr_gen_app/dashboard4.html"
