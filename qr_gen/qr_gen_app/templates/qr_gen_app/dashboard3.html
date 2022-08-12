@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>Landing page</title>
-   <link rel="stylesheet" href="{% static 'dashboard3.css' %}">
+   <link rel="stylesheet" href="{% static 'styles/dashboard3.css' %}">
    <script src="https://kit.fontawesome.com/cf2b35cc7f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,12 +54,14 @@
     <div class="form">
             <h4 class="">Basic Info</h4><a href="#"><img src="{% static 'images/Vectory.png' %}" class="yas"></a>
             <form method="POST">
-                <label for="company name" class="name">Company Name</label><br>
-                <input class="text" type="text" name="company name" placeholder="e.g Jumia"><br><br>
+                {% csrf_token %}
+                <label for="company" class="name">Company Name</label><br>
+                <input class="text" type="text" name="company" placeholder="e.g Jumia"><br><br>
                 <label for="fname">About</label><br>
-                <input type="text" id="fname" name="firstname" placeholder="e-commerce"><br><br>
+                <input type="text" id="fname" name="about" placeholder="e-commerce"><br><br>
                 <label for="fname">Opening hours</label><br>
-                <input type="text" id="fname" name="firstname" placeholder="Monday-Friday(9am-6pm)">
+                <input type="text" id="fname" name="opening_hours" placeholder="Monday-Friday(9am-6pm)">
+                <button type="submit">Submit</button>
             </form><br>
             
             <h3 class="track"> Contact</h3><a href=""><img src="{% static 'images/Group (2).png' %}" class="photo"></a>

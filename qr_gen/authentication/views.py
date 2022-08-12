@@ -24,7 +24,7 @@ def SignUp(request):
             messages.warning(request, "Passwords do not match!")
 
         if User.objects.filter(email=email).exists():
-            messages.INFO(request, "Email already exists")
+            messages.info(request, "Email already exists")
             return redirect("authentication:signup")
 
         user = User.objects.create_user(email=email, password=password)
@@ -48,7 +48,7 @@ def Login(request):
         if user:
             login(request, user)
             messages.success(request, f"{user.email} logged in successfully!")
-            return redirect("authentication:home")
+            return redirect("qr_gen_app:qr_dashboard")
         else:
             messages.warning(request, "Please check your credentials")
     return render(request, "authentication/login.html")
@@ -74,4 +74,5 @@ def ProfileUpdate(request):
         number = request.POST.get("number")
         user = User.save()
         messages.success(request, "Welcome,You can now Generate QR ")
+        return redirect("qr_gen_app:qr_dashboard")
     return render(request, template_name)

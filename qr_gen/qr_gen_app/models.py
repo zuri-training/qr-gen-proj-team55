@@ -3,7 +3,7 @@ import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image
-from authentication.models import CustomUser
+from authentication.models import CustomUser, Profile
 
 # Create your models here.
 
@@ -40,8 +40,8 @@ class QrcodeBusiness(BaseModel):
     about = models.TextField()
     opening_hours = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    email = models.EmailField(max_length=254)
-    phone = models.CharField(max_length=12)
+    # email = models.EmailField(max_length=254, null)
+    # phone = models.CharField(max_length=12)
     # logo = models.ImageField (upload_to='images')
     # url = models.URLField(max_length=200)
     # qr_code = models.ImageField(upload_to="qr_codes", blank=True)
