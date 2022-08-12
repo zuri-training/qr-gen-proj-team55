@@ -6,3 +6,4 @@ from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
 admin.site.register(QrcodeBusiness)
 admin.site.register(QrcodeAppDownload)
 admin.site.register(QrcodeEvent)
+

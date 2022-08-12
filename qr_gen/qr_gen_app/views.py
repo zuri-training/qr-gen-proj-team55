@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
+
 
 
 class qr_dashboardview(TemplateView):
@@ -7,4 +9,4 @@ class qr_dashboardview(TemplateView):
 
 
 class appdownload(TemplateView):
-    template_name = "qr_gen_app/sdashboard.html"
+    template_name = "qr_gen_app/dashboard4.html"
