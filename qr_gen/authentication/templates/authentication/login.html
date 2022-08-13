@@ -52,7 +52,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" required />
+              <input type="password" name="password" id="password" minlength="6" required />
             </div>
           </div>
           <small class="text-light-purple">Forgot password?</small>
@@ -63,7 +63,7 @@
             >Don't have an account?
             <span class="text-light-purple">
               <a href="{% url 'authentication:signup' %}">Sign up</a> </span
-            >></small
+            ></small
           >
         </form>
       </div>
