@@ -16,20 +16,20 @@
     <main>
       <section class="rightside">
         <h2 class="first">Basic info</h2>
-        <form class="app" action="/" method="POST">
-          {% csrf_token %}
+        <form class="app" method="POST" action="add">
+        {% csrf_token %}
           <label>App Name</label>
-          <input type="text" name= "APPname"/>
+          <input type="text" name= "APPname">
           <label>Description </label>
-          <input type="text" name="Desc"/> <br><br><br><br><br><br><br><br>
+          <input type="text" name="Desc"> <br><br><br><br><br><br><br><br>
 
-        <h2 class="second">App link</h2>
+          <h2 class="second">App link</h2>
 
           <label>Url</label>
-          <input type="url" name="url" />
+          <input type="url" name="url" >
           <label>QRcode name</label>
-          <input type="text" name="QRcode" />
-          <input type= "submit"/>
+          <input type="text" name="QRcode" >
+          <input type= "submit">
         </form>
       </section>
     </main>
