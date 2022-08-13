@@ -26,13 +26,14 @@ This project involve building a web site for generating a (Quick Response) qr_co
 
 * __The repository file arranged in the following order
 
-1. FrontEnd Folder contains the HTML,CSS and Javascripts code.
-2. ContributionList is a folder that contains a txt files of every contributed Team members.
-3. MyGen folder contains all the codes use in evecuting this project with subfolder such as
+1. `FrontEnd Folder` contains the HTML,CSS and Javascripts code.
+2. `ContributionList` is a folder that contains a txt files of every contributed Team members.
+3. `qr_gen folder` contains all the codes use in evecuting this project with subfolder such as
  * `authentication`, Apllication folder for the CustomUser and Profile models as well as other .py files in an app, it also contains templates folder for all jinja realted to authentication
  *  `qr_gen_app`, this is the second applcation folder that how all the functionalit of the qr_generation.
  *  `static`, this contains all the static folders such as the CSS; IMAGEs and the JS files.
- *  `templates`  
+ *  `templates` contains a based templates file that is extended in all templates file.
+ *   `qr_gen` is the the project folder
 
 ## Problem statement
 With the evolution of Technology, quick access to service using an encrypted method has been evolving over the years, platform for the creating this encryption is what we will be building.
