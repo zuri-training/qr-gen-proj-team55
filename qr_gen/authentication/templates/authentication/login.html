@@ -9,6 +9,13 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="{% static './styles/login.css' %}" />
+    <style>
+      .warning{
+        color: red;
+        font-style: italic;
+      }
+    </style>
+
   </head>
   <body>
     <main>
@@ -31,6 +38,14 @@
           </div>
         </div>
         <form method="POST">
+          <div class="warning">
+            {% if messages %}
+              {% for message in messages %}
+              <p>{{ message }}</p>
+              {% endfor %}   
+            {% endif %}
+
+          </div>
           {% csrf_token %}
           <div class="second-genqr-img spacing">
             <img src="{% static './images/qrcode 2.png' %}" />
