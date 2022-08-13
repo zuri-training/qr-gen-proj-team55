@@ -1,13 +1,14 @@
+import cProfile
 from django.db import models
 import qrcode
 from io import BytesIO
 from django.core.files import File
 from PIL import Image
-from authentication.models import CustomUser
+from authentication.models import Profile
 
 # Create your models here.
 
-
+"""
 class BaseModel(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
@@ -32,10 +33,10 @@ class BaseModel(models.Model):
         canvas.close()
         super().save(*args, **kwargs)
 
-
+"""
 # For business card
-class QrcodeBusiness(BaseModel):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+class QrcodeBusiness(models.Model):
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     company = models.CharField(max_length=200)
     about = models.TextField()
     opening_hours = models.CharField(max_length=200)
@@ -63,7 +64,7 @@ class QrcodeBusiness(BaseModel):
 
 # For App Download
 class QrcodeAppDownload(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     app_name = models.CharField(max_length=200)
     description = models.TextField()
     # logo = models.ImageField (upload_to='images')
@@ -86,8 +87,8 @@ class QrcodeAppDownload(models.Model):
 
 
 # Event
-class QrcodeEvent(BaseModel):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+class QrcodeEvent(models.Model):
+    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     organizer = models.CharField(max_length=200)
     about = models.TextField()
     event_name = models.CharField(max_length=200)
