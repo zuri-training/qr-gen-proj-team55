@@ -18,12 +18,20 @@
 * [Project Status](#project-status)
 * [Contributors](#contributors)
 * [Relevant Links](#relevant-links)
-* [API Details](#api-details)
 * [Acknowledgements](#acknowledgements)
 
 ## Project Description
 
 This project involve building a web site for generating a (Quick Response) qr_code where user that visit the site can only generate the code after registration. The code generated should also be able to use both on and offline and can be shared via email, can be downloaded in PNG and PDF
+
+* __The repository file arranged in the following order
+
+1. FrontEnd Folder contains the HTML,CSS and Javascripts code
+2. MyGen folder contains all the codes use in evecuting this project with subfolder such as
+ * `authentication`, Apllication folder for the CustomUser and Profile models as well as other .py files in an app, it also contains templates folder for all jinja realted to authentication
+ *  `qr_gen_app`, this is the second applcation folder that how all the functionalit of the qr_generation.
+ *  `static`, this contains all the static folders such as the CSS; IMAGEs and the JS files.
+ *  `templates`  
 
 ## Problem statement
 With the evolution of Technology, quick access to service using an encrypted method has been evolving over the years, platform for the creating this encryption is what we will be building.
@@ -177,8 +185,6 @@ __FrontEnd Contributors__ <br/>
 * BackEnd Schema 
 * Design Documentation
 
-
-## API Details
 
 ## Acknowledgements
 Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
