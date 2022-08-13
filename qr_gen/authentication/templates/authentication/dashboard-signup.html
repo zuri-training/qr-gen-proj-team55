@@ -46,7 +46,7 @@
             <div class="form-row">
               <div class="form-group spacing">
                 <label for="fullname">Full name</label>
-                <input type="text" id="fullname" placeholder="Jane Doe" />
+                <input type="text" id="fullname" placeholder="Jane Doe" required />
               </div>
             </div>
             <div class="form-row">
@@ -56,13 +56,14 @@
                   type="email"
                   id="email"
                   placeholder="johndoe@gmail.com"
+                  required
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phoneNo">Phone Number</label>
-                <input type="number" id="phoneNo" placeholder="+234090909990" />
+                <input type="number" id="phoneNo" placeholder="+234090909990" required />
               </div>
             </div>
             <div class="form-row">
@@ -72,6 +73,7 @@
                   name="txtname"
                   rows="4"
                   cols="50"
+                  placeholder="Short bio"
                   maxlength="200"
                 >
                 </textarea>
@@ -130,7 +132,7 @@
           <div class="w-100">
             <button
               class="btn purple-button my-2 px-4 w-100"
-              href=""
+              href="{% url 'qr_gen_app:qr_dashboard' %}"
               role="button"
             >
               Create a Profile
