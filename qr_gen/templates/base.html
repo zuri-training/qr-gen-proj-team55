@@ -16,16 +16,16 @@
 
 <body>
 
-    <body id="body-pd">
-        <header class="header" id="header">
+    <body id="body-pd" class="body-pd">
+        <header class="header body-pd" id="header">
             <div class="header_toggle">
-                <i class='bx bx-menu px-2' id="header-toggle"></i>
+                <i class='bx bx-menu px-2 bx-x' id="header-toggle"></i>
                 {% comment %} <i class='bx bx-menu px-6' id="header-toggle"></i> {% endcomment %}
                 <img src=" {% static '/images/qrcode 1.png' %}" />
             </div>
             <div class="header_img"> <img src="https://randomuser.me/api/portraits/lego/3.jpg" alt=""> </div>
         </header>
-        <div class="l-navbar" id="nav-bar">
+        <div class="l-navbar show" id="nav-bar">
             <nav class="nav">
                 <div>
                     <a href="#" class="nav_logo">
@@ -35,7 +35,7 @@
                             <img src="{% static '/images/dashboard-icon.png' %}" alt="dashboard-icon">
                             <span class="nav_name">Dashboard</span>
                         </a>
-                        <a href="#" class="nav_link">
+                        <a href="{% url 'qr_gen_app:qr_dashboard3' %}" class="nav_link">
                             <img src="{% static '/images/generate-qr-icon.png' %}" alt="qr-icon">
                             <span class="nav_name">Generate QR</span>
                         </a>

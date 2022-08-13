@@ -60,6 +60,8 @@ body {
   justify-content: center;
 }
 
+
+
 form {
   display: flex;
   align-self: center;
@@ -122,7 +124,12 @@ p {
 
 .text-light-purple {
   color: #694d84;
+  text-decoration: none !important;
 }
+
+.text-light-purple a {
+  text-decoration: none !important;
+  }
 
 @keyframes up-down {
   0% {

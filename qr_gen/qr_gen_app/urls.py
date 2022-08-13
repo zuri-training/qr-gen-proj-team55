@@ -7,7 +7,7 @@ app_name = 'qr_gen_app'
 urlpatterns = [
     path("qr_dashboard/",views.qr_dashboardview.as_view(), name='qr_dashboard'),
     path("",views.QrcodeBusinessView, name='qr_dashboard3'),
-    path('appdownload/', views.QrcodeAppDownloadView, name='appdownload'),
-    path('event/', views.QrcodeEventView, name='event'),
+    path("qr_dashboard4/",views.QrcodeAppDownloadView, name='qr_dashboard4'),
+    path("qr_dashboard5/",views.QrcodeEventView, name='qr_dashboard5'),
 ]
 

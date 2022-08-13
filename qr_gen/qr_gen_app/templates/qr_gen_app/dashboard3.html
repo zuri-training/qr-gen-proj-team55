@@ -1,85 +1,254 @@
+
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Landing page</title>
-   <link rel="stylesheet" href="{% static 'styles/dashboard3.css' %}">
-   <script src="https://kit.fontawesome.com/cf2b35cc7f.js" crossorigin="anonymous"></script>
+    <title>Gen QR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static './styles/dashboard3.css' %}">
 </head>
 
 <body>
-    <header class="friz">
-        <img class="logo" src="{% static 'images/qrcode 2.png' %}" alt="">
-        <div class=>
-           
-    <!-- <form action="" class="searchbar">
-        <button> <i class="fa-solid fa-magnifying-glass"></i></button>
-        <input type="text" class="my-input" placeholder="Search" >
-    </form>  -->
-    <div class= sidenav>
-    <a class="dashboard" href=""><img class="dashimg" src="{% static 'images/ri-dashboard-fill.png' %}" alt=""><p>Dashboard</p></a>
-    <a class="generate" href=""><img class="generateimg" src="{% static 'images/ri-qr-code-line.png' %}" alt=""><p>Generate QR</p></a>
-    <a class="group" href=""><img class="groupimg" src="{% static 'images/Group.jpg' %}" alt=""><p>Overview </p></a> 
-    <div class="drop"><i class="fa-solid fa-caret-down"> 
-        <ul>
-            <li><a href="">Activate</a> </li>
-            <li> <a href="">Archived</a> </li>
-            <li> <a href="">Closed</a> </li>
+    <main class="container dashboard3">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 d-flex flex-row">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="{% url 'qr_gen_app:qr_dashboard3' %}">Business Card</a>
+            </li>
+
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="{% url 'qr_gen_app:qr_dashboard4' %}">App Download</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="{% url 'qr_gen_app:qr_dashboard5' %}">Event Invite</a>
+            </li>
         </ul>
-    </i></div>
-    <a  class="Documentation" href=""><img class="docimg" src="{% static 'images/Group (1).png' %}" alt=""><p>Documentation</p></a>
-    <a  class="setting "href=""><img class="setimg"  src="{% static 'images/ri-settings-4-line.png' %}" alt=""><p>Setting</p></a>
-    </div>
-    <div class="logo">
-        <img src="{% static 'images/qrcode 2.png' %}" alt=""> 
-    
-        <button class="disabled"><a href=""></a> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
-  
-      </div>
-        <div class= icon> <i class="fa-solid fa-user"></i></div>
-      
-</form>
-{% csrf_token %}
-    </div>
-    <div>
-        <a class="busi" href="{% url 'qr_gen_app:qr_dashboard3' %}">Business Card</a>
-         <a class="apps" href="">App Download</a>
-          <a class="even" href="">Event invite</a>
-    </div>
-    <div class="form">
-            <h4 class="">Basic Info</h4><a href="#"><img src="{% static 'images/Vectory.png' %}" class="yas"></a>
-            <form method="POST">
-                {% csrf_token %}
-                <label for="company" class="name">Company Name</label><br>
-                <input class="text" type="text" name="company" placeholder="e.g Jumia"><br><br>
-                <label for="fname">About</label><br>
-                <input type="text" id="fname" name="about" placeholder="e-commerce"><br><br>
-                <label for="fname">Opening hours</label><br>
-                <input type="text" id="fname" name="opening_hours" placeholder="Monday-Friday(9am-6pm)">
-                <button type="submit">Submit</button>
-            </form><br>
-            
-            <h3 class="track"> Contact</h3><a href=""><img src="{% static 'images/Group (2).png' %}" class="photo"></a>
-            <h3 class="url"> Web Url</h3><a href=""><img src="{% static 'images/Group (2).png' %}" class="phics"></a>
-            <!-- <h3 class="brand"> Add image/Brand</h3><a href="#"><img src="images/Vector.png" class="vect"></a> -->
-          </div>
-          <div class="last">
-           <div class="moon"><img src="{% static 'images/group3.png' %}" class="gut"></div> 
-           <h3 class="shape"> Shape</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="plus"></a>
-            <h3 class="color"> Color</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="plan"></a>
-            <h3 class="loga"> Add image/logo</h3><a href="#"><img src="{% static 'images/Vector.png' %}" class="pet"></a>
+        <form class="row" method="POST">
+            {% csrf_token %}
+            <section class="rounded my-3 col-md-6 col-lg-6">
+                <div class="bg-white p-3">
+                    <div class="accordion p-2 rounded" id="accordionExample">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Basic Info
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <div class="form-group spacing">
+                                            <label for="companyName">Company Name</label>
+                                            <input type="text" name="company" id="companyName" placeholder="e.g Jumia" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="about">About</label>
+                                            <input type="text" name="about" id="about" placeholder="E-commerce" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="openingHours">Opening hours</label>
+                                            <input type="text" name="opening_hours" id="openingHours"
+                                                placeholder="Monday - Friday (9am-6pm)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Contact Details
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <div class="form-group spacing">
+                                            <label for="address">Address</label>
+                                            <input type="text" name="address" id="address" placeholder="e.g Jumia Address">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input name="email" type="email" id="email" placeholder="jumianig@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="phoneNo">Phone Number</label>
+                                            <input name="phoneNo" type="text" id="phoneNo" placeholder="+234090909990">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    Web URL
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <div class="form-group spacing">
+                                            <label for="websiteName">Website Name</label>
+                                            <input name="websiteName" type="text" id="websiteName" placeholder="Jumia">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="websiteEmail">Website Email</label>
+                                            <input name="websiteEmail" type="email" id="websiteEmail" placeholder="jumianig@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="websiteURL">Website URL</label>
+                                            <input name="websiteURL" type="text" id="websiteURL" placeholder="jumianig.com">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    Add Image/Brand
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <div class="form-group row spacing d-flex align-items-baseline gap-4">
+                                            <div class="purple-dotted-div text-center d-flex col-lg-6"
+                                                id="img-preview-panel">
+                                                <span class="m-auto text-center plus-button">+</span>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <span class="img-warn">Note : Your file size should not exceed 2mb</span><br />
+                                                <label for="imgInp" class="btn add-button">Add Image</label>
+                                                <input accept="image/*" type='file' name="file"
+                                                    style="visibility:hidden;" id="imgInp" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-6 my-3 col-lg-4">
+                <div class="bg-white p-3">
+                    <h4>QR code section</h4>
+                    <div>
+                        <div class="purple-dotted-QRdiv m-auto">
+                            <img src="{% static './images/sample-qr.png' %}" class="img-fluid" alt="sample-qr" />
+                        </div>
+                    </div>
+                    <div class="accordion p-2 rounded" id="accordionQRExample">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingQROne">
+                                <button class="accordion-button" type="button" data-bs-toggle=""
+                                    data-bs-target="#collapseQROne" aria-expanded="" aria-controls="">
+                                    Shape
+                                </button>
+                            </h2>
+                            <div id="collapseQROne" class="accordion-collapse collapse"
+                                aria-labelledby="headingQROne" data-bs-parent="#accordionQRExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <h3>Code for QR shape here</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingQRThree">
+                                <button class="accordion-button" type="button" data-bs-toggle=""
+                                    data-bs-target="#collapseQRThree" aria-expanded="true"
+                                    aria-controls="collapseQRThree">
+                                    Add image/logo
+                                </button>
+                            </h2>
+                            <div id="collapseQRThree" class="accordion-collapse collapse"
+                                aria-labelledby="headingQRThree" data-bs-parent="#accordionQRExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <h3>Code for QR image here</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header" id="headingQRTwo">
+                                <button class="accordion-button" type="button" data-bs-toggle=""
+                                    data-bs-target="#collapseQRTwo" aria-expanded="true" aria-controls="collapseQRTwo">
+                                    Color
+                                </button>
+                            </h2>
+                            <div id="collapseQRTwo" class="accordion-collapse collapse" aria-labelledby="headingQRTwo"
+                                data-bs-parent="#accordionQRExample">
+                                <div class="accordion-body">
+                                    <div class="form-row">
+                                        <h3>Code for QR color here</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons-for-QRcode">
+                        <div class="d-flex justify-content-around">
+                            <button type="submit" class="btn white-button my-2 px-3" role="button">Download QR</button>
+                            <button type="submit" class="btn purple-button my-2 px-3" role="button">Generate code</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
+    </script>
+    <script>
+        const fReader = new FileReader();
+        const imgUpload = document.getElementById("imgInp");
+        const imgPreviewPanel = document.getElementById("img-preview-panel");
+        let imgPreviewHtml = ""
 
-            <div>
-                <button type="button" class="right">Download QR</button>
-                <button type="submit" class="rate">Generate Code</button>
-            </div>
-            <script src="{% static 'scripts.js' %}"></script>
-          </div>
+        imgUpload.addEventListener('input', (e) => {
+            console.log(e.target.files[0])
+            fReader.readAsDataURL(e.target.files[0]);
+            fReader.onloadend = function (event) {
+                console.log(event.target.result)
+                imgPreviewHtml += `
+    <img class="m-2" width="149px" height="168px" src=${event.target.result} />
+    `
 
+                imgPreviewPanel.innerHTML = imgPreviewHtml
+            }
+        })
+    </script>
 </body>
+
 </html>
