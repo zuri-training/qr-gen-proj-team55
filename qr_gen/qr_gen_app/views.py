@@ -72,7 +72,7 @@ def QrcodeEventView(request):
         venue=venue,
         organizer_email=organizer_email,
         organizer_phone=organizer_phone,
-        name=(f"Organizer: {organizer} \n About: {about} \n Event: {event_name} \n Venue: {venue} \n Organizer's Email: {organizer_email} \n Organizer's Phone number: {organizer_phone} "))
+        name=(f"Organizer: {organizer} \nAbout: {about} \nEvent: {event_name} \nVenue: {venue} \nOrganizer's Email: {organizer_email} \nOrganizer's Phone number: {organizer_phone} "))
         event.save()
         messages.success(request, 'Event Created Successfully')
         return redirect ('qr_gen_app:event_code')
