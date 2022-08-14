@@ -1,9 +1,12 @@
+from nturl2path import url2pathname
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .models import QrcodeBusiness, QrcodeAppDownload, QrcodeEvent
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
+
+
 
 # user = BaseModel
 class qr_dashboardview(TemplateView):
@@ -27,11 +30,11 @@ def QrcodeBusinessView(request):
         address=address,
         email=email,
         phone=phone,
-        url=url)
+        name=url)
         business.save()
         
         messages.success(request, 'Business Card Created Successfully')
-        return redirect ('qr_gen_app:qr_dashboard')
+        return redirect ('qr_gen_app:business_code')
     return render(request, 'qr_gen_app/dashboard3.html')
 
     
@@ -40,17 +43,17 @@ def QrcodeAppDownloadView(request):
     if request.method =='POST':
         app_name = request.POST.get('app_name', None)
         description = request.POST.get('description', None)
-        androidApp_link = request.POST.get('androidApp_link', None)
-        iosApp_link = request.POST.get('iosApp_link', None)
+        url= request.POST.get('url', None)
         appdownload = QrcodeAppDownload(user=request.user,
         app_name=app_name, 
         description=description,
-        androidApp_link=androidApp_link,
-        iosApp_link=iosApp_link)
+        name=url,
+        
+        )
         appdownload.save()
         
         messages.success(request, 'App Download Created Successfully')
-        return redirect ('qr_gen_app:qr_dashboard')
+        return redirect ('qr_gen_app:app_code')
 
     return render(request, 'qr_gen_app/dashboard4.html')
 
@@ -70,9 +73,25 @@ def QrcodeEventView(request):
         event_name=event_name,
         venue=venue,
         organizer_email=organizer_email,
-        organizer_phone=organizer_phone)
+        organizer_phone=organizer_phone,
+        name=(f"Organizer: {organizer} \nAbout: {about} \nEvent: {event_name} \nVenue: {venue} \nOrganizer's Email: {organizer_email} \nOrganizer's Phone number: {organizer_phone} "))
         event.save()
         messages.success(request, 'Event Created Successfully')
-        return redirect ('qr_gen_app:qr_dashboard')
+        return redirect ('qr_gen_app:event_code')
 
     return render(request, 'qr_gen_app/dashboard5.html')
+
+def business_qrcode_view(request):
+    obj = QrcodeBusiness.objects.get(id=1)
+    return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
+
+def app_qrcode_view(request):
+    obj = QrcodeAppDownload.objects.get(id=1)
+    return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
+
+def event_qrcode_view(request):
+    obj = QrcodeEvent.objects.get(id=1)
+    return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
+
+
+
