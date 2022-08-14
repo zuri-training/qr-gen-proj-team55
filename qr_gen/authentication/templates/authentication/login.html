@@ -13,6 +13,10 @@
       .warning{
         color: red;
         font-style: italic;
+        padding: .5rem;
+        margin-bottom: .5rem;
+        background-color: #ff000017;
+        border-radius: .75rem;
       }
     </style>
 
@@ -38,14 +42,14 @@
           </div>
         </div>
         <form method="POST">
-          <div class="warning">
-            {% if messages %}
+          {% if messages %}
+            <div class="warning">
               {% for message in messages %}
               <p>{{ message }}</p>
               {% endfor %}   
-            {% endif %}
+            </div>
+          {% endif %}
 
-          </div>
           {% csrf_token %}
           <div class="second-genqr-img spacing">
             <img src="{% static './images/qrcode 2.png' %}" />
