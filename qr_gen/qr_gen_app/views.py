@@ -6,6 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 
+
+
 # user = BaseModel
 class qr_dashboardview(TemplateView):
     template_name = "qr_gen_app/maindashboard.html"
@@ -90,3 +92,6 @@ def app_qrcode_view(request):
 def event_qrcode_view(request):
     obj = QrcodeEvent.objects.get(id=1)
     return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
+
+
+
