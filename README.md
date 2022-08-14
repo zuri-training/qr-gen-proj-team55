@@ -183,7 +183,7 @@ __FrontEnd Contributors__ <br/>
 `http://github.com/Sanmi01`
 
 * Akobi, Mutiat Adeoti
-`https://github.com/PhoenixClix`
+`http://github.com/PhoenixClix`
 
 ## Deployment Instruction
 1. Create a folder `mkdir folder_name`
