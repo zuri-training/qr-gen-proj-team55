@@ -18,12 +18,23 @@
 * [Project Status](#project-status)
 * [Contributors](#contributors)
 * [Relevant Links](#relevant-links)
-* [API Details](#api-details)
 * [Acknowledgements](#acknowledgements)
 
 ## Project Description
 
 This project involve building a web site for generating a (Quick Response) qr_code where user that visit the site can only generate the code after registration. The code generated should also be able to use both on and offline and can be shared via email, can be downloaded in PNG and PDF
+
+* __The repository file arranged in the following order
+
+1. `FrontEnd Folder` contains the HTML,CSS and Javascripts code.
+2. `ContributionList` is a folder that contains a txt files of every contributed Team members.
+3. `qr_gen folder` contains all the codes use in evecuting this project with subfolder such as
+ * `authentication`, Apllication folder for the CustomUser and Profile models as well as other .py files in an app, it also contains templates folder for all jinja related to authentication
+ *  `qr_gen_app`, this is the second applcation folder that how all the functionalit of the qr_generation.
+ *  `static`, this contains all the static folders such as the CSS; IMAGEs and the JS files.
+ *  `templates` contains a based templates file that is extended in all templates file.
+ *   `qr_gen` is the the project folder.
+4. `requirements.txt` contains the dependencies installed throughout the project.
 
 ## Problem statement
 With the evolution of Technology, quick access to service using an encrypted method has been evolving over the years, platform for the creating this encryption is what we will be building.
@@ -46,7 +57,7 @@ The project is was built using the ![Visual Studio Code](https://img.shields.io/
         ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
         ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 * __Database__<br/>
-        ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+        ![PostqresSQL](https://img.shields.io/badge/PostGresQL-%2300f.svg?style=for-the-badge&logo=postgressql&logoColor=white)
 
  
 ## Contributors Guide
@@ -177,8 +188,6 @@ __FrontEnd Contributors__ <br/>
 * BackEnd Schema 
 * Design Documentation
 
-
-## API Details
 
 ## Acknowledgements
 Special thanks to Zuri Team and I4G for giving every member of this Team the privelege to Learn as well
