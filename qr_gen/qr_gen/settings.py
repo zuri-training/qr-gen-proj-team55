@@ -20,8 +20,10 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
