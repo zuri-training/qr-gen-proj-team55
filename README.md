@@ -207,6 +207,7 @@ __FrontEnd Contributors__ <br/>
 
 ## Relevant Links
 * Figma Design - `https://www.figma.com/file/65TGG1OYI0nqPJ4EgMdmgn/Untitled?node-id=0%3A1 `
+* FigJam Design - `https://www.figma.com/file/pnbr6wzlXhcPcv0wvKQ80V/qr-gen-55?node-id=0%3A1 `
 * BackEnd Schema - `https://drive.google.com/file/d/1try3DiVSOIg-wCeG1_2_TUOyGgY5gvEi/view?usp=sharing `
 * Design Documentation
 
