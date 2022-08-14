@@ -24,10 +24,12 @@ class CustomUser(AbstractUser):
 
 
 class Profile(models.Model):
-    email = models.OneToOneField(CustomUser, max_length=120, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, max_length=120, on_delete=models.CASCADE)
     name = models.CharField(max_length=120, null=True)
     phone_Number = models.CharField(max_length=120, null=True)
-    avater = models.ImageField(null=True, default="avatar.svg")
+    avatar = models.ImageField(null=True, default="avatar.svg")
+    website_url = models.URLField(null=True)
+    url = models.URLField(null=True)
     bio = models.TextField(null=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)

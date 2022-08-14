@@ -32,7 +32,8 @@
 
   <body>
     <main class="container">
-      <form class="row">
+      <form class="row" method="POST">
+        {% csrf_token %}
         <section class="bg-white rounded my-3 col-lg-6">
           <div class="background-img rounded"></div>
           <div class="profile-img">
@@ -46,7 +47,7 @@
             <div class="form-row">
               <div class="form-group spacing">
                 <label for="fullname">Full name</label>
-                <input type="text" id="fullname" placeholder="Jane Doe" required />
+                <input type="text" id="fullname" placeholder="Jane Doe" name="name" required />
               </div>
             </div>
             <div class="form-row">
@@ -54,6 +55,7 @@
                 <label for="email">Email Address</label>
                 <input
                   type="email"
+                  name="email"
                   id="email"
                   placeholder="johndoe@gmail.com"
                   required
@@ -63,7 +65,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="phoneNo">Phone Number</label>
-                <input type="number" id="phoneNo" placeholder="+234090909990" required />
+                <input type="text" name="phoneNo" id="phoneNo" minlength="10" maxlength="13" placeholder="+23490909990" required />
               </div>
             </div>
             <div class="form-row">
@@ -73,6 +75,7 @@
                   name="txtname"
                   rows="4"
                   cols="50"
+                  name="bio"
                   placeholder="Short bio"
                   maxlength="200"
                 >
@@ -89,6 +92,7 @@
                 <input
                   class="w-25 m-2"
                   type="text"
+                  name="website"
                   placeholder="Behance"
                   disabled
                 />
@@ -96,6 +100,7 @@
                   class="w-75 m-2"
                   type="text"
                   id="URL"
+                  name="url"
                   placeholder="URL"
                 />
               </div>
@@ -106,6 +111,7 @@
                   type="text"
                   class="m-2"
                   id="website-URL"
+                  name="website-URL"
                   placeholder="Website URL"
                 />
               </div>

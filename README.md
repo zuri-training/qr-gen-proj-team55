@@ -17,8 +17,11 @@
 * [Product Specification](#product-specialization)
 * [Project Status](#project-status)
 * [Contributors](#contributors)
+* [Deployment Instruction](#deployment-instruction)
 * [Relevant Links](#relevant-links)
 * [Acknowledgements](#acknowledgements)
+
+
 
 ## Project Description
 
@@ -182,10 +185,30 @@ __FrontEnd Contributors__ <br/>
 * Akobi, Mutiat Adeoti
 `https://github.com/PhoenixClix`
 
+## Deployment Instruction
+1. Create a folder `mkdir folder_name`
+2. Change directory to the folder: cd `folder_name`
+3. Clone main branch to folder: `git clone --branch main https://github.com/zuri-training/qr-gen-proj-team55`
+4. create virtual environment: `python -m virtualenv local`
+5. Activate virtual environment: `local\Scripts\activate`
+6. Install packages: `pip install -r requirements.txt`
+7. Create database, database_user and password  for the project: `PostgreSQL database`
+8. To generate a new secret key and add it to ,env file created in the page `python manage.py generate_secret_key`
+9. Create a new file .env and copy the contents of .env_template into it and replace:
+
+
+* {DB} with database name
+* {DB_HOST} with localhost
+* {DB_PORT} with 5432
+* {DB_USERNAME} with database postgres
+* {DB_PASSWORD} with database *********
+
+
+
 ## Relevant Links
 * Figma Design - `https://www.figma.com/file/65TGG1OYI0nqPJ4EgMdmgn/Untitled?node-id=0%3A1 `
-* FigJam Design
-* BackEnd Schema 
+* FigJam Design - `https://www.figma.com/file/pnbr6wzlXhcPcv0wvKQ80V/qr-gen-55?node-id=0%3A1 `
+* BackEnd Schema - `https://drive.google.com/file/d/1try3DiVSOIg-wCeG1_2_TUOyGgY5gvEi/view?usp=sharing `
 * Design Documentation
 
 
