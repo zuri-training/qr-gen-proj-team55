@@ -7,6 +7,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib import messages
+from .models import Profile
 
 # from .forms import UserForm
 from django.views.generic import TemplateView
@@ -55,7 +56,7 @@ def Login(request):
 
 
 def Logout(request):
-    if request.method == "GET":
+    if request.method == "POST":
         messages.INFO(request, "You have logged out successfully!")
         logout(request)
     return redirect("authentication:home")
@@ -69,10 +70,24 @@ class HomePage(TemplateView):
 def ProfileUpdate(request):
     template_name = "authentication/dashboard-signup.html"
     if request.method == "POST":
-        fullname = request.POST.get("fullname")
+        name = request.POST.get("name")
         email = request.POST.get("email")
-        number = request.POST.get("number")
-        user = User.save()
+        phone_Number = request.POST.get("phoneNo")
+        #we'll modify the avater later
+        avatar = request.FILES.get("avatar")
+        bio = request.POST.get("bio")
+        url = request.POST.get("url")
+        website_url = request.POST.get("website-url")
+
+        profile = Profile.objects.create(user=request.user,
+        name=name, 
+        phone_Number=phone_Number,
+        avatar=avatar,
+        bio=bio, 
+        url=url,
+        website_url=website_url)
+        profile.save()
         messages.success(request, "Welcome,You can now Generate QR ")
         return redirect("qr_gen_app:qr_dashboard")
+
     return render(request, template_name)
