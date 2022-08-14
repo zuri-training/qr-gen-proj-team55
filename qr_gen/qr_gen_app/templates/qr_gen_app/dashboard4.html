@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <main class="container dashboard3">
+    <main class="container dashboard4">
         <ul class="navbar-nav ms-auto my-2 my-lg-0 d-flex flex-row">
             <li class="nav-item mx-2">
               <a class="nav-link" href="{% url 'qr_gen_app:qr_dashboard3' %}">Business Card</a>
@@ -72,15 +72,15 @@
                                 <div class="accordion-body">
                                     <div class="form-row">
                                         <div class="form-group spacing">
-                                            <label for="androidApp">Android App</label>
-                                            <input name="androidApp_link" type="text" id="androidApp" placeholder="https://play.google.com/apps/details....">
+                                            <label for="androidApp">Android/ios App</label>
+                                            <input name="url" type="text" id="url" placeholder="https://....">
                                         </div>
                                     </div>
                                     <div class="form-row">
-                                        <div class="form-group">
+                                        {% comment %} <div class="form-group">
                                             <label for="iosApp">iOS App</label>
                                             <input name="iosApp_link" type="text" id="iosApp" placeholder="https://apps.apple.com/us/app....">
-                                        </div>
+                                        </div> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
