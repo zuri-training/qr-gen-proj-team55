@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "rest_framework",
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
+    # for sharing on social media
+    "django_social_share"
 ]
 
 MIDDLEWARE = [
