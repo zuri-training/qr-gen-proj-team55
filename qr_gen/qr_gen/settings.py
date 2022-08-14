@@ -13,8 +13,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-
-# SECRET_KEY = 'django-insecure-^z@g_7u*^i5gk6vq=l2yks^jron@z_8m%&428iz4l$hdvrrago'
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 
@@ -78,7 +76,14 @@ WSGI_APPLICATION = "qr_gen.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+'''
+DATABASES={
+   'default':{
+      'ENGINE':'django.db.backends.sqlite3',
+      'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
+   }
+}
+'''
 DATABASES={
    'default':{
       'ENGINE':'django.db.backends.postgresql_psycopg2',
