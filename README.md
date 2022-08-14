@@ -193,7 +193,9 @@ __FrontEnd Contributors__ <br/>
 5. Activate virtual environment: `local\Scripts\activate`
 6. Install packages: `pip install -r requirements.txt`
 7. Create database, database_user and password  for the project: `PostgreSQL database`
-8. Create a new file .env and copy the contents of .env_template into it and replace:
+8. To generate a new secret key and add it to ,env file created in the page `python manage.py generate_secret_key`
+9. Create a new file .env and copy the contents of .env_template into it and replace:
+
 
 * {DB} with database name
 * {DB_HOST} with localhost
@@ -201,9 +203,10 @@ __FrontEnd Contributors__ <br/>
 * {DB_USERNAME} with database postgres
 * {DB_PASSWORD} with database *********
 
+
+
 ## Relevant Links
 * Figma Design - `https://www.figma.com/file/65TGG1OYI0nqPJ4EgMdmgn/Untitled?node-id=0%3A1 `
-* FigJam Design - 
 * BackEnd Schema - `https://drive.google.com/file/d/1try3DiVSOIg-wCeG1_2_TUOyGgY5gvEi/view?usp=sharing `
 * Design Documentation
 
