@@ -83,12 +83,12 @@ height: 168px;
 border-radius: 12px;
 }
 
-.dashboard3 .nav-link {
+.dashboard4 .nav-link {
     color: #AEADAF !important;
     font-size: 14px;
 }
 
-.dashboard3 .nav-link.active {
+.dashboard4 .nav-link.active {
     color: #7B925F !important;
     border-bottom: 4px solid #7B925F;
 }
@@ -110,4 +110,8 @@ border-radius: 12px;
   outline: 0;
   box-shadow: none;
   /* box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%); */
+}
+
+.dashboard4 {
+  margin-top: 5rem;
 }
