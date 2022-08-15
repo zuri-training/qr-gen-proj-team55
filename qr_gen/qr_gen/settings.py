@@ -76,24 +76,24 @@ WSGI_APPLICATION = "qr_gen.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
+
 DATABASES={
    'default':{
       'ENGINE':'django.db.backends.sqlite3',
       'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
    }
 }
-'''
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'postgres',
-      'USER':'postgres',
-      'PASSWORD':'dewpoint12',
-      'HOST':'localhost',
-      'PORT':'5432',
-   }
-}
+
+#DATABASES={
+ #  'default':{
+  #    'ENGINE':'django.db.backends.postgresql_psycopg2',
+   #   'NAME':'postgres',
+    #  'USER':'postgres',
+     # 'PASSWORD':'dewpoint12',
+     # 'HOST':'localhost',
+     # 'PORT':'5432',
+#   }
+#}
 """
 REST_FRAMEWORK = {
     "DAFAULT_AUTHENTICATION_CLASSES": (
@@ -137,12 +137,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-MEDIA_URL = "/images/"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 MEDIA_ROOT = BASE_DIR / "static" / "Images"
 
