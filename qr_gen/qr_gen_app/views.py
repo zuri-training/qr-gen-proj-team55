@@ -84,6 +84,7 @@ def QrcodeEventView(request):
 #functions to return qr codes to the screen
 def business_qrcode_view(request):
     obj = QrcodeBusiness.objects.order_by('-id')[0]
+
     return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
 
 def app_qrcode_view(request):
