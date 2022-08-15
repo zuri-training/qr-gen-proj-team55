@@ -34,7 +34,7 @@ def QrcodeBusinessView(request):
         name=url)
         business.save()
         
-        messages.success(request, 'Business Card Created Successfully')
+        #messages.success(request, 'Business Card Created Successfully')
         return redirect ('qr_gen_app:business_code')
     return render(request, 'qr_gen_app/dashboard3.html')
 
@@ -52,7 +52,7 @@ def QrcodeAppDownloadView(request):
         )
         appdownload.save()
         
-        messages.success(request, 'App Download Created Successfully')
+        #messages.success(request, 'App Download Created Successfully')
         return redirect ('qr_gen_app:app_code')
 
     return render(request, 'qr_gen_app/dashboard4.html')
@@ -76,7 +76,7 @@ def QrcodeEventView(request):
         organizer_phone=organizer_phone,
         name=(f"Organizer: {organizer} \nAbout: {about} \nEvent: {event_name} \nVenue: {venue} \nOrganizer's Email: {organizer_email} \nOrganizer's Phone number: {organizer_phone} "))
         event.save()
-        messages.success(request, 'Event Created Successfully')
+        #messages.success(request, 'Event Created Successfully')
         return redirect ('qr_gen_app:event_code')
 
     return render(request, 'qr_gen_app/dashboard5.html')
