@@ -110,7 +110,7 @@ a {
     font-size: 1.25rem
 }
 
-.show {
+.sidebar-component.show {
     left: 0
 }
 
@@ -149,6 +149,14 @@ a {
     margin-left: 6px;
 }
 
+.nav_list a {
+    text-decoration: none;
+}
+
+.nav-bottom-div a {
+    text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(3rem + 1rem) 0 0 0;
@@ -173,7 +181,7 @@ a {
         padding: 1rem 1rem 0 0
     }
 
-    .show {
+    .sidebar-component.show {
         width: calc(68px + 156px)
     }
 
