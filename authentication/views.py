@@ -52,7 +52,7 @@ def Login(request):
             return redirect("qr_gen_app:qr_dashboard")
         else:
             messages.warning(request, "Please check your credentials")
-      return render(request, "authentication/login.html")
+    return render(request, "authentication/login.html")
 
 
 def Logout(request):
