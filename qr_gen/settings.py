@@ -34,11 +34,11 @@ INSTALLED_APPS = [
     # APP NAMES
     "authentication",
     "qr_gen_app",
-    # REST FRAMEWORK
+    #REST FRAMEWORK
     "rest_framework",
-    # for generating secret key in external folder [ - python manage.py generate_secret_key]
+    #for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
-    # for sharing on social media
+    #for sharing on social media
     "django_social_share",
 ]
 
@@ -84,16 +84,30 @@ DATABASES={
    }
 }
 """
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "d2hvlolohip54m",
-        "USER": "aepbdhovmdwbsj",
-        "PASSWORD": "98bca0b6a83deb4e8e2bcda76c771ba12e315066ce323cee78dfd8fbc2226164",
-        "HOST": "ec2-44-205-64-253.compute-1.amazonaws.com",
+        "NAME": "d82s7oa5k9b9td",
+        "USER": "znsucggmbozllj",
+        "PASSWORD": "33249c15ac1d775275bf2b54415171000aa8f3b99ee516d9c12be47bea73853d",
+        "HOST": "ec2-44-207-126-176.compute-1.amazonaws.com",
         "PORT": "5432"
     }
 }
+'''
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "dewpoint12",
+        "HOST": "localhost",
+        "PORT": "5432"
+    }
+}
+'''
 
 """
 REST_FRAMEWORK = {
