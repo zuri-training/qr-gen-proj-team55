@@ -1,2 +1,1 @@
-web: python YOURSCRIPTNAME.py
-worker: python YOURSCRIPTNAME.py
+web: gunicorn qr-gen-team55.wsgi --log-file -
