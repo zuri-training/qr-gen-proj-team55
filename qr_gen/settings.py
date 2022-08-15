@@ -86,13 +86,13 @@ DATABASES={
 """
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "d82s7oa5k9b9td",
-        "USER": "znsucggmbozllj",
-        "PASSWORD": "33249c15ac1d775275bf2b54415171000aa8f3b99ee516d9c12be47bea73853d",
-        "HOST": "ec2-44-207-126-176.compute-1.amazonaws.com",
-        "PORT": "5432"
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd82s7oa5k9b9td',
+        'USER': 'znsucggmbozllj',
+        'PASSWORD': '33249c15ac1d775275bf2b54415171000aa8f3b99ee516d9c12be47bea73853d',
+        'HOST': 'ec2-44-207-126-176.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 '''
@@ -160,8 +160,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 """
 
-MEDIA_URL = "/images/"
-MEDIA_ROOT = BASE_DIR / "static" / "Images"
+#MEDIA_URL = "/images/"
+#MEDIA_ROOT = BASE_DIR / "static" / "Images"
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -173,6 +173,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_root")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 django_heroku.settings(locals())
