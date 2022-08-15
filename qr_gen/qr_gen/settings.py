@@ -2,6 +2,7 @@ from ctypes import cast
 import os
 from pathlib import Path
 from decouple import config
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,10 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
@@ -40,7 +39,7 @@ INSTALLED_APPS = [
     # for generating secret key in external folder [ - python manage.py generate_secret_key]
     "django_extensions",
     # for sharing on social media
-    "django_social_share"
+    "django_social_share",
 ]
 
 MIDDLEWARE = [
@@ -77,36 +76,24 @@ WSGI_APPLICATION = "qr_gen.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
+"""
 DATABASES={
    'default':{
       'ENGINE':'django.db.backends.sqlite3',
       'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
    }
 }
-'''
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'postgres',
-      'USER':'postgres',
-      'PASSWORD':'dewpoint12',
-      'HOST':'localhost',
-      'PORT':'5432',
-   }
-}
 """
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'postgres',
-      'USER':'postgres',
-      'PASSWORD':'dewpoint12',
-      'HOST':'localhost',
-      'PORT':'5432',
-   }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "dewpoint12",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
 }
-"""
 
 """
 REST_FRAMEWORK = {
@@ -174,3 +161,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_root")
+django_heroku.settings(locals())
