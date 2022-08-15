@@ -88,7 +88,7 @@ def ProfileUpdate(request):
         url=url,
         website_url=website_url)
         profile.save()
-        #messages.success(request, "Welcome,You can now Generate QR ")
+        messages.success(request, "Welcome,You can now Generate QR ")
         return redirect("qr_gen_app:qr_dashboard")
 
     return render(request, template_name)
