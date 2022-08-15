@@ -8,13 +8,14 @@ from django.views.generic import TemplateView
 
 
 
+
 # user = BaseModel
 class qr_dashboardview(TemplateView):
     template_name = "qr_gen_app/maindashboard.html"
 
+#functions to generate qr codes
 @login_required
 def QrcodeBusinessView(request):
-    
     if request.method =='POST':
         company= request.POST.get('company', None)
         about = request.POST.get('about', None)
@@ -48,7 +49,6 @@ def QrcodeAppDownloadView(request):
         app_name=app_name, 
         description=description,
         name=url,
-        
         )
         appdownload.save()
         
@@ -81,16 +81,18 @@ def QrcodeEventView(request):
 
     return render(request, 'qr_gen_app/dashboard5.html')
 
+#functions to return qr codes to the screen
 def business_qrcode_view(request):
-    obj = QrcodeBusiness.objects.get(id=1)
+    obj = QrcodeBusiness.objects.order_by('-id')[0]
+
     return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
 
 def app_qrcode_view(request):
-    obj = QrcodeAppDownload.objects.get(id=1)
+    obj = QrcodeAppDownload.objects.order_by('-id')[0]
     return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
 
 def event_qrcode_view(request):
-    obj = QrcodeEvent.objects.get(id=1)
+    obj = QrcodeEvent.objects.order_by('-id')[0]
     return render (request, 'qr_gen_app/qrcode_view.html', {'obj':obj})
 
 

@@ -62,6 +62,7 @@ def Logout(request):
     return redirect("authentication:home")
 
 
+
 class HomePage(TemplateView):
     template_name = "authentication/index.html"
 

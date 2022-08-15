@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'styles/qrcode_view.css' %}" />
   </head>
   <body>
-    <main>
+    <main style="text-align:center">
       <h1>Here is your QR code</h1>
       <!--<h2>{{obj.Qrcode_name}}</h2>-->
      
@@ -22,18 +22,18 @@
     
  
      
-      {% post_to_facebook object_or_url "Share to Facebook!" %}
-      {% post_to_linkedin object_or_url "Share to Linkedin!" %}
-      {% post_to_telegram object_or_url "Share to Telegram!" %}
-      {% post_to_twitter object_or_url "Share to Twitter!" %}
-      {% post_to_whatsapp object_or_url "Share to Whatsapp!" %}
+      {% post_to_facebook obj.qr_code.url "Share to Facebook!" %}
+      {% post_to_linkedin obj.qr_code.url "Share to Linkedin!" %}
+      {% post_to_telegram obj.qr_code.url "Share to Telegram!" %}
+      {% post_to_twitter obj.qr_code.url "Share to Twitter!" %}
+      {% post_to_whatsapp obj.qr_code.url "Share to Whatsapp!" %}
 
-      <a href= "/download"><button>Download</button></a>
-
+      <h5>Right click on the image and click save to download to your devices</h5>
+      
     </main>
   </body>
 </html>
 
 
-{% endblock content %}
+    {% endblock content %}
 
