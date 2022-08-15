@@ -87,10 +87,10 @@ DATABASES={
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "dewpoint12",
-        "HOST": "localhost",
+        "NAME": "d977hn5ghjf7on",
+        "USER": "visbpppyhvynot",
+        "PASSWORD": "0d11c2312d4f38b312865a10601edc58f4b2c464e58cbd983a09cc278ed9be8d",
+        "HOST": "ec2-54-85-56-210.compute-1.amazonaws.com",
         "PORT": "5432",
     }
 }
