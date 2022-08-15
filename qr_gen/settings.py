@@ -14,11 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config("DJANGO_SECRET_KEY", default="")
+SECRET_KEY = "f3lls!7@rsyn(*_1zg#zn7c4ufyc_yx(tklkw8d8%t2j*dj#v5"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
+DEBUG = True
 
 
 ALLOWED_HOSTS = ["*"]  # To run in any machine
