@@ -92,3 +92,8 @@ def ProfileUpdate(request):
         return redirect("qr_gen_app:qr_dashboard")
 
     return render(request, template_name)
+
+@login_required(login_url="login")
+def settings(request):
+    template_name= "authentication/settings.html"
+    return render(request, template_name)
