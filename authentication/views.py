@@ -48,16 +48,16 @@ def Login(request):
         user = authenticate(request, username=email, password=password)
         if user:
             login(request, user)
-            #messages.success(request, f"{user.email} logged in successfully!")
+            messages.success(request, f"{user.email} logged in successfully!")
             return redirect("qr_gen_app:qr_dashboard")
         else:
-            #messages.warning(request, "Please check your credentials")
-            return render(request, "authentication/login.html")
+            messages.warning(request, "Please check your credentials")
+      return render(request, "authentication/login.html")
 
 
 def Logout(request):
     if request.method == "POST":
-        #messages.INFO(request, "You have logged out successfully!")
+        messages.INFO(request, "You have logged out successfully!")
         logout(request)
     return redirect("authentication:home")
 
