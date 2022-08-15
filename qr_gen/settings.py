@@ -16,6 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "f3lls!7@rsyn(*_1zg#zn7c4ufyc_yx(tklkw8d8%t2j*dj#v5"
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -75,24 +76,38 @@ WSGI_APPLICATION = "qr_gen.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-'''
+"""
 DATABASES={
    'default':{
       'ENGINE':'django.db.backends.sqlite3',
       'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
    }
 }
-'''
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':'postgres',
-      'USER':'postgres',
-      'PASSWORD':'dewpoint12',
-      'HOST':'localhost',
-      'PORT':'5432',
-   }
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd82s7oa5k9b9td',
+        'USER': 'znsucggmbozllj',
+        'PASSWORD': '33249c15ac1d775275bf2b54415171000aa8f3b99ee516d9c12be47bea73853d',
+        'HOST': 'ec2-44-207-126-176.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
 }
+'''
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "dewpoint12",
+        "HOST": "localhost",
+        "PORT": "5432"
+    }
+}
+'''
+
 """
 REST_FRAMEWORK = {
     "DAFAULT_AUTHENTICATION_CLASSES": (
@@ -135,13 +150,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
+"""
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-MEDIA_URL = "/images/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 STATICFILES_DIRS = [BASE_DIR / "static"]
+"""
+
+#MEDIA_URL = "/images/"
+#MEDIA_ROOT = BASE_DIR / "static" / "Images"
+
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 
 # Default primary key field type
