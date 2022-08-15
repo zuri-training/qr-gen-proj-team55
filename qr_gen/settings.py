@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -87,11 +87,11 @@ DATABASES={
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "d1l37durnb9cb4",
-        "USER": "yxuvetbbyurfqb",
-        "PASSWORD": "1f5993094e66f91c857b4ff1ef1e8a75c2cb16927deaaf49a7d3fad49547adfd",
-        "HOST": "ec2-34-203-182-65.compute-1.amazonaws.com",
-        "PORT": "5432",
+        "NAME": "d2hvlolohip54m",
+        "USER": "aepbdhovmdwbsj",
+        "PASSWORD": "98bca0b6a83deb4e8e2bcda76c771ba12e315066ce323cee78dfd8fbc2226164",
+        "HOST": "ec2-44-205-64-253.compute-1.amazonaws.com",
+        "PORT": "5432"
     }
 }
 
