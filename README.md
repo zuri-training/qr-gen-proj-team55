@@ -117,6 +117,33 @@ Project is : *in progress*
 
 ## Contributors
 
+__BackEnd Contributors__ <br/>
+* David Ilori
+`https://github.com/Ddluwole`
+
+* Awal Umar
+`https://github.com/drizla01 (TEAM LEAD)`
+
+* Joshua Eze
+`http://github.com/Allenkeys`
+
+* Dighomanor Jeremiah
+`http://github.com/Digho007`
+<br/>
+
+__FrontEnd Contributors__ <br/>
+* Mark nehemiah
+`http://github.com/markben2122`
+
+* Samson Vershima Saaikyaa
+`http://github.com/vershima2`
+
+* Awelewa Oluwasanmi Omolade
+`http://github.com/Sanmi01`
+
+* Akobi, Mutiat Adeoti
+`http://github.com/PhoenixClix`
+
 __Designers__ <br/>
 * Itepu precious eden
  `https://github.com/preciousitepu`
@@ -158,32 +185,7 @@ __Designers__ <br/>
 `https://github.com/Busayoatiku`
 <br/>
 
-__BackEnd Contributors__ <br/>
-* David Ilori
-`https://github.com/Ddluwole`
 
-* Awal Umar
-`https://github.com/drizla01 (TEAM LEAD)`
-
-* Joshua Eze
-`http://github.com/Allenkeys`
-
-* Dighomanor Jeremiah
-`http://github.com/Digho007`
-<br/>
-
-__FrontEnd Contributors__ <br/>
-* Mark nehemiah
-`http://github.com/markben2122`
-
-* Samson Vershima Saaikyaa
-`http://github.com/vershima2`
-
-* Awelewa Oluwasanmi Omolade
-`http://github.com/Sanmi01`
-
-* Akobi, Mutiat Adeoti
-`http://github.com/PhoenixClix`
 
 ## Deployment Instruction
 1. Create a folder `mkdir folder_name`
