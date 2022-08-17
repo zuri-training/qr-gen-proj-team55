@@ -163,7 +163,7 @@ __BackEnd Contributors__ <br/>
 `https://github.com/Ddluwole`
 
 * Awal Umar
-`https://github.com/drizla01`
+`https://github.com/drizla01 (TEAM LEAD)`
 
 * Joshua Eze
 `http://github.com/Allenkeys`
